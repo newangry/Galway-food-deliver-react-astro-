@@ -1,0 +1,46 @@
+---
+import MdiLinkedin from "~icons/mdi/linkedin";
+import MdiGithub from "~icons/mdi/github";
+import MdiRss from "~icons/mdi/rss";
+import MdiYoutube from "~icons/mdi/youtube";
+
+const today = new Date();
+---
+
+<footer class="flex items-center justify-between py-5">
+  <p>&copy; {today.getFullYear()} Josafá Marengo</p>
+  <div class="flex items-center space-x-1">
+    <a
+      href="https://linkedin.com/in/josafamarengo"
+      target="_blank"
+      class="w-8 h-8 flex items-center justify-center rounded-md p-1.5 hover:bg-slate-300 dark:hover:bg-slate-800"
+    >
+      <MdiLinkedin />
+      <span class="sr-only">Linkedin</span>
+    </a>
+    <a
+      href="https://github.com/algorizr"
+      target="_blank"
+      class="w-8 h-8 flex items-center justify-center rounded-md p-1.5 hover:bg-slate-300 dark:hover:bg-slate-800"
+    >
+      <MdiGithub />
+      <span class="sr-only">Github</span>
+    </a>
+    <a
+      href="https://youtube.com/@josafa.marengo"
+      target="_blank"
+      class="w-8 h-8 flex items-center justify-center rounded-md p-1.5 hover:bg-slate-300 dark:hover:bg-slate-800"
+    >
+      <MdiYoutube />
+      <span class="sr-only">Youtube</span>
+    </a>
+    <a
+      href="/rss.xml"
+      target="_blank"
+      class="w-8 h-8 flex items-center justify-center rounded-md p-1.5 hover:bg-slate-300 dark:hover:bg-slate-800"
+    >
+      <MdiRss />
+      <span class="sr-only">RSS</span>
+    </a>
+  </div>
+</footer>
