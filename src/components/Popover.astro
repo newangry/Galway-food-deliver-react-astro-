@@ -1,0 +1,41 @@
+---
+import Down from "~icons/material-symbols/chevron-left-rounded"
+
+const { name } = Astro.props;
+---
+<li class="relative group">
+      <button
+        type="button"
+        class="inline-flex items-center justify-center w-full px-4 py-2 text-sm 
+        group-hover:bg-zinc-300
+        dark:group-hover:text-white dark:group-hover:bg-zinc-900 rounded-t"
+        id="options-menu"
+        aria-expanded="true"
+        aria-haspopup="true"
+      >
+        <span>{name}</span>
+        <Down class="ml-2 w-5 h-5 -rotate-90 dark:group-hover:text-white group-hover:rotate-90 transition-rotate duration-300 ease-in-out" />
+      </button>
+      <div
+        class="
+              hidden
+              group-hover:block
+              absolute
+              z-10
+              w-56
+              rounded-b
+              origin-top-right
+              bg-zinc-300
+              dark:bg-zinc-900
+              overflow-hidden 
+              shadow-lg 
+            "
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="options-menu"
+      >
+        <div class="py-1">
+          <slot />
+        </div>
+      </div>
+    </li>
