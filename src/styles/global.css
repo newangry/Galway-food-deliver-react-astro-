@@ -15,7 +15,7 @@ div[data-rehype-pretty-code-fragment] {
 }
 
 div[data-rehype-pretty-code-fragment] pre {
-  @apply p-0 py-2 rounded-t-none rounded-lg overflow-x-auto bg-slate-950;
+  @apply p-0 py-2 rounded-t-none rounded-lg overflow-x-auto bg-slate-900;
 }
 
 div[data-rehype-pretty-code-fragment] code {
@@ -35,4 +35,8 @@ div[data-rehype-pretty-code-fragment] .line {
 
 div[data-rehype-pretty-code-fragment] .highlighted {
   @apply border-blue-400 bg-blue-400/20;
+}
+
+article p {
+  @apply text-xl font-light leading-7 tracking-tight text-black dark:text-zinc-50;
 }

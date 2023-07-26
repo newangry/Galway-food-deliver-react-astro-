@@ -43,7 +43,7 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
     class="prose prose-slate max-w-none prose-headings:scroll-my-20 prose-a:underline-offset-2 prose-a:decoration-blue-600 prose-img:rounded-lg dark:prose-invert"
   >
     <h1>{title}</h1>
-    <div class="font-semibold text-xs uppercase space-y-2">
+    <div class="font-normal text-xs uppercase space-y-2">
       <div class="flex flex-wrap items-center space-x-1">
         <span>
           <FormattedDate date={pubDate} />
@@ -66,7 +66,9 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
           tags.map((tag) => (
             <a
               href={`/tags/${tag}`}
-              class="no-underline bg-slate-300 hover:bg-slate-400 dark:bg-slate-700 dark:hover:bg-slate-600 p-1 px-4 rounded-full"
+              class="no-underline bg-zinc-800 text-white dark:text-black dark:bg-zinc-300 hover:bg-zinc-950 dark:hover:bg-zinc-100 
+              transition-colors duration-300 ease-in-out text-xs font-semibold uppercase tracking-wider
+              p-1 px-4 rounded"
             >
               {tag}
             </a>

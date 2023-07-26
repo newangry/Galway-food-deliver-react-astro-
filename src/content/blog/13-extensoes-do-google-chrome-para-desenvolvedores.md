@@ -7,7 +7,6 @@ orderInSeries: 6
 pubDate: '2023-02-02'
 cover: ~/assets/placeholder-hero.png
 coverAlt: 'Fundo Amarelo Escuro, com ícone do Google Chrome e Frase: 10 Extensões do Chrome'
-subject: Dicas
 tags: 
     - dicas
 ---

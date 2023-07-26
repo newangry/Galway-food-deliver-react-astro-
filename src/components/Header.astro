@@ -3,7 +3,7 @@ import ToggleTheme from "./ToggleTheme";
 import Popover from "./Popover.astro";
 ---
 
-<header class="hidden p-4 fixed top-0 left-0 right-0 z-50 md:block bg-zinc-50 dark:bg-zinc-950">
+<header class="hidden px-4 py-3 fixed top-0 left-0 right-0 z-50 md:block bg-zinc-50 dark:bg-zinc-950">
   <div class="container mx-auto md:max-w-4xl flex justify-between items-center">
     <a href="/">
       <img
@@ -15,37 +15,35 @@ import Popover from "./Popover.astro";
       />
     </a>
     <nav>
-      <ul class="flex space-x-6 text-sm">
-        <li>Categorias</li>
+      <ul class="flex space-x-1 text-sm">
+        <li class="px-4 py-2 text-sm 
+        hover:bg-zinc-200 cursor-pointer
+        dark:hover:text-white dark:hover:bg-zinc-800 rounded-lg">Categorias</li>
         <Popover name="Ferramentas">
           <ul class="p-2 dark:text-white">
                 <li
-                  class="p-2 hover:bg-slate-200 hover:text-slate-900
-                     rounded-md"
+                  class="p-2 hover:bg-zinc-400 dark:hover:bg-zinc-700 rounded-md"
                 >
                   <a href="/ferramentas/gerador-de-a-whatsapp/">
                     Gerador de a WhatsApp
                   </a>
                 </li>
                 <li
-                  class="p-2 hover:bg-slate-200 hover:text-slate-900
-                     rounded-md"
+                  class="p-2 hover:bg-zinc-400 dark:hover:bg-zinc-700 rounded-md"
                 >
                   <a href="/ferramentas/gerador-de-qr-code/">
                     Gerador de QR Code
                   </a>
                 </li>
                 <li
-                  class="p-2 hover:bg-slate-200 hover:text-slate-900
-                     rounded-md"
+                  class="p-2 hover:bg-zinc-400 dark:hover:bg-zinc-700 rounded-md"
                 >
                   <a href="/ferramentas/cifra-de-cesar/">
                     Cifra de César
                   </a>
                 </li>
                 <li
-                  class="p-2 hover:bg-slate-200 hover:text-slate-900
-                     rounded-md"
+                  class="p-2 hover:bg-zinc-400 dark:hover:bg-zinc-700 rounded-md"
                 >
                   <a href="/ferramentas/calculadora-de-freelas/">
                     Calculadora de Freelas
@@ -53,7 +51,9 @@ import Popover from "./Popover.astro";
                 </li>
               </ul>
         </Popover>
-        <li>Materiais Gratuitos</li>
+        <li class="px-4 py-2 text-sm 
+        hover:bg-zinc-200 cursor-pointer
+        dark:hover:text-white dark:hover:bg-zinc-800 rounded-lg">Materiais Gratuitos</li>
       </ul>
     </nav>
     <ToggleTheme client:idle />
