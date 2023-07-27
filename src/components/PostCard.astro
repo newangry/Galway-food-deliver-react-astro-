@@ -11,7 +11,7 @@ const { post } = Astro.props;
 
 <a
   href={!post.data.planned ? `/blog/${post.slug}` : null}
-  class={`space-y-2 flex flex-col items-start rounded-lg p-5 bg-zinc-300 hover:bg-zinc-400 dark:bg-zinc-900 dark:hover:bg-zinc-800`}
+  class={`space-y-2 flex flex-col items-start rounded-lg p-5 bg-zinc-50 shadow shadow-zinc-500 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:shadow-none`}
 >
   <div class="space-y-1">
     <div class="flex items-center space-x-2">
@@ -25,11 +25,11 @@ const { post } = Astro.props;
       }
     </div>
     <div class="flex flex-col">
-      <span class="flex items-center space-x-1 text-xs font-bold uppercase">
+      <span class="flex items-center space-x-1 text-xs font-normal uppercase">
         <FormattedDate date={post.data.pubDate} />
         {post.data.tags.map((tag) => <span class="font-normal bg-zinc-600 dark:bg-zinc-300 dark:text-black text-white px-1 rounded">{tag}</span>)}
       </span>
     </div>
   </div>
-  <p>{post.data.description}</p>
+  <p class="font-light">{post.data.description}</p>
 </a>

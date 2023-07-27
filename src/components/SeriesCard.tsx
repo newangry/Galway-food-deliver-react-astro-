@@ -17,17 +17,17 @@ export default function ({ series, posts, order }: Props) {
   };
 
   return (
-    <div class="bg-slate-300 dark:bg-slate-800 rounded-lg">
+    <div class="bg-zinc-50 shadow shadow-zinc-500 dark:shadow-none dark:bg-zinc-900 rounded-lg">
       <button
-        class={`p-5 rounded-lg text-left space-y-2 hover:bg-slate-400 dark:hover:bg-slate-700 ${
-          isOpen ? "border-b-4 border-blue-600 rounded-b-lg bg-slate-400 dark:bg-slate-700" : ""
+        class={`p-5 rounded-lg text-left space-y-2 hover:bg-zinc-200 dark:hover:bg-zinc-800 ${
+          isOpen ? "border-b-2 border-zinc-600 rounded-b-lg bg-zinc-300 dark:bg-zinc-700" : ""
         }`}
         onClick={handleOnClick}
       >
         <div class="flex items-center justify-between">
           <div class="flex items justify-center space-x-2">
             <h2 class="text-xl text-black dark:text-white font-bold">{series.data.title}</h2>
-            <span class="text-xl">{`${
+            <span class="text-xl font-light">{`${
               order ? ` • ${order} de ${posts.length}` : ` • ${posts.length} Artigos`
             }`}</span>
           </div>
@@ -39,7 +39,7 @@ export default function ({ series, posts, order }: Props) {
             )}
           </div>
         </div>
-        <p>{series.data.description}</p>
+        <p class="font-light">{series.data.description}</p>
       </button>
       {isOpen && (
         <ul class="p-5 space-y-2">
