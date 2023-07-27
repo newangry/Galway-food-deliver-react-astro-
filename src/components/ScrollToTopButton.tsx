@@ -10,6 +10,7 @@ export default function ScrollToTopButton() {
     <button
       onClick={handleOnClick}
       className="no-underline text-xs font-bold uppercase hover:text-slate-400 dark:hover:text-white"
+      aria-label={"Voltar ao início"}
     >
       <span class="hidden sm:block">Voltar ao início</span>
       <span class="block sm:hidden">
