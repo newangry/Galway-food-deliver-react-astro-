@@ -21,7 +21,6 @@ export default function ToggleTheme() {
 
   return (
     <button
-      class="w-10 h-10 flex items-center justify-center rounded-md"
       onClick={toggleTheme}
     >
       {theme === "light" ? (

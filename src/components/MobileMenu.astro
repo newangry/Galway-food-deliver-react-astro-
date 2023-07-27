@@ -1,0 +1,32 @@
+---
+import Home from "~icons/mdi/home";
+import Search from "~icons/mdi/magnify";
+import ArrowUp from "~icons/mdi/arrow-up";
+
+import ToggleTheme from "./ToggleTheme";
+import ScrollToTopButton from "./ScrollToTopButton";
+
+function handleOnClick() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+---
+
+<nav class="fixed p-3 bottom-0 left-0 right-0 h-12 bg-zinc-900 sm:hidden">
+  <ul class="flex justify-around">
+    <li>
+      <a href="/" class="text-white text-xl">
+        <Home />
+      </a>
+    </li>
+    <li class="text-white text-xl">
+      <Search />
+    </li>
+    <li class="text-white">
+      <ToggleTheme client:idle />
+    </li>
+    <li class="text-white">
+      <ScrollToTopButton client:idle />
+    </li>
+  </ul>
+</nav>
