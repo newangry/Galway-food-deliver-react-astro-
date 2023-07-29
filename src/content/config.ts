@@ -36,6 +36,13 @@ const blog = defineCollection({
         })
         .optional(),
       coverAlt: z.string().optional(),
+      citations: z.object({
+        author: z.string(),
+        title: z.string(),
+        url: z.string(),
+        date: z.date().optional(),
+        accessed: z.date().optional(),
+      }).array().optional(),
     }),
 });
 
@@ -49,3 +56,4 @@ const series = defineCollection({
 });
 
 export const collections = { blog, series };
+

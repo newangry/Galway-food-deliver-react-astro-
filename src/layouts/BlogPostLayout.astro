@@ -19,6 +19,7 @@ type Heading = {
 export interface Props extends Blog {
   readingTime: string;
   headings: Heading[];
+  url: string;
 }
 
 const {
@@ -27,18 +28,28 @@ const {
   tags,
   pubDate,
   updatedDate,
+  citations,
   cover,
   coverAlt,
   readingTime,
   headings,
   seriesId,
   orderInSeries,
+  url,
 } = Astro.props;
 
 const series = (await getCollection("series")).find((s) => s.data.id === seriesId);
 ---
 
-<BaseLayout title={title} description={description} postMeta={{ pubDate, tags }}>
+<BaseLayout
+  {title}
+  {description}
+  {pubDate}
+  {updatedDate}
+  {url}
+  {citations}
+  isPost
+>
   <div
     class="prose prose-slate max-w-none prose-headings:scroll-my-20 prose-a:underline-offset-2 prose-a:decoration-blue-600 prose-img:rounded-lg dark:prose-invert"
   >
@@ -63,7 +74,7 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
       </div>
       <div class="flex space-x-2 items-center">
         {
-          tags.map((tag) => (
+          tags.map((tag: unknown) => (
             <a
               href={`/tags/${tag}`}
               class="no-underline bg-zinc-800 text-white dark:text-black dark:bg-zinc-300 hover:bg-zinc-950 dark:hover:bg-zinc-100 
@@ -87,19 +98,30 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
         <article>
           <slot />
         </article>
+        {
+          citations && (
+            <div>
+              <h2>Referências:</h2>
+              <ul>
+                {citations.map((citation: any) => (
+                <li>{citation.author.toUpperCase()}.<a href={citation.url} target="_blank" rel="noopener noreferrer">{citation.title}</a></li>
+              ))}
+              </ul>
+            </div>
+          )
+        }
       </div>
       {
         headings.length > 0 && (
-          <nav class="hidden text-sm space-y-2 mt-9 lg:block lg:w-4/12 h-screen sticky top-20 z-40">
+          <nav class="hidden text-sm space-y-2 mt-9 mb-2 lg:block lg:w-4/12 h-[80vh] sticky top-20 z-40 overflow-auto">
             <span class="font-black dark:text-white text-black uppercase">Índice</span>
             <TableOfContent headings={headings} />
-            <div class="border-slate-700 border-b-[1px]" />
-            <div class="flex float-right">
-              <ScrollToTopButton client:idle />
-            </div>
           </nav>
         )
       }
+    </div>
+    <div class="hidden sm:block float-right">
+      <ScrollToTopButton client:idle />
     </div>
   </div>
 </BaseLayout>

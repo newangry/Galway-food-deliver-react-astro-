@@ -49,5 +49,8 @@ export default defineConfig({
         autoInstall: true,
       }),
     ],
+    ssr: {
+      noExternal: ["astro-seo-schema"],
+    },
   },
 });

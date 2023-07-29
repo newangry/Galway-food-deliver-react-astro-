@@ -1042,6 +1042,13 @@ astro-compress@^1.1.47:
     svgo "3.0.2"
     terser "5.17.7"
 
+astro-seo-schema@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/astro-seo-schema/-/astro-seo-schema-2.2.0.tgz#9ab32523874d25face2b16b2f208717f79105659"
+  integrity sha512-8421r2gyDjHmTpRTzhSika3gQ3Q9JU+Bdzq+4w07sVtgmJVEKmrxqStaUG4rOMiXMJQmu7d17l6+4ZtCUYkAiA==
+  dependencies:
+    schema-dts "^1.1.0"
+
 astro@^2.6.0:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/astro/-/astro-2.6.3.tgz#6bb5737ab946a2c7c8f02fc7ce812b8abd01222a"
@@ -4141,6 +4148,11 @@ sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
+
+schema-dts@^1.1.0:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/schema-dts/-/schema-dts-1.1.2.tgz#82ccf71b5dcb80065a1cc5941888507a4ce1e44b"
+  integrity sha512-MpNwH0dZJHinVxk9bT8XUdjKTxMYrA5bLtrrGmFA6PTLwlOKnhi67XoRd6/ty+Djt6ZC0slR57qFhZDNMI6DhQ==
 
 section-matter@^1.0.0:
   version "1.0.0"
