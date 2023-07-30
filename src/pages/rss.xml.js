@@ -1,17 +1,18 @@
 import rss from "@astrojs/rss";
-import { getCollection } from "astro:content";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import sanitizeHtml from "sanitize-html";
 
 export async function get(context) {
-  const posts = await getCollection("blog");
+  const postImportResult = import.meta.glob("/src/content/blog/*.{md, mdx}", {eager: true});
+  const posts = Object.values(postImportResult);
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    site: "https://josafa.com.br",
-    stylesheet: "/rss/styles.xsl",
+    site: context.site,
     items: posts.map((post) => ({
-      ...post.data,
+      ...post.frontmatter,
       link: `/blog/${post.slug}/`,
+      content: sanitizeHtml(post.compiledContent()),
     })),
   });
 }
