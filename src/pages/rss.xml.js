@@ -12,7 +12,7 @@ export async function get(context) {
     site: context.site,
     items: posts.map((post) => ({
       ...post.frontmatter,
-      link: `${context.site}${post.file.replace(".md", "").replace(".mdx", "")}`,
+      link: `${context.site}${post.file.replace("/opt/build/repo/src/content/","").replace(".md", "").replace(".mdx", "")}`,
       content: sanitizeHtml(post.compiledContent()),
     })),
   });
