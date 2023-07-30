@@ -5,13 +5,14 @@ import sanitizeHtml from "sanitize-html";
 export async function get(context) {
   const postImportResult = import.meta.glob("/src/content/blog/*.{md, mdx}", {eager: true});
   const posts = Object.values(postImportResult);
+  console.log(posts)
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     site: context.site,
     items: posts.map((post) => ({
       ...post.frontmatter,
-      link: `/blog/${post.slug}/`,
+      link: `${context.site}${post.file.replace(".md", "").replace(".mdx", "")}`,
       content: sanitizeHtml(post.compiledContent()),
     })),
   });
