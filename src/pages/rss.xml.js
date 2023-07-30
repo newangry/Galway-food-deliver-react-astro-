@@ -7,7 +7,7 @@ export async function get(context) {
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    site: context.site,
+    site: "https://josafa.com.br",
     stylesheet: "/rss/styles.xsl",
     items: posts.map((post) => ({
       ...post.data,
