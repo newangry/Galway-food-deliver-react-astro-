@@ -3,7 +3,7 @@ title: 'Prepare-se para os testes do Linkedin'
 description: 'Aprenda como se preparar para os testes de competência do Linkedin e aumente suas chances de sucesso em processos seletivos.'
 featured: true
 pubDate: '2023-05-07'
-cover: ~/assets/placeholder-hero.png
+cover: ~/assets/linkedin.webp
 coverAlt: 'Celular com a loja de aplicativos da Apple aberta no aplicativo do Linkedin'
 tags: 
     - dicas
@@ -13,7 +13,7 @@ No LinkedIn, é possível destacar suas habilidades adicionando-as ao seu perfil
 
 Se você está se preparando para os testes de habilidades do LinkedIn, uma ferramenta útil e gratuita que pode ajudar é o site que criei, acessível em [https://linkedin-skill-assessments.netlify.app/](https://linkedin-skill-assessments.netlify.app/).
 
-![https://raw.githubusercontent.com/josafamarengo/skill-assessments/main/src/assets/img/screenshots/home.png](https://raw.githubusercontent.com/josafamarengo/skill-assessments/main/src/assets/img/screenshots/home.png)
+<img src="https://raw.githubusercontent.com/josafamarengo/skill-assessments/main/src/assets/img/screenshots/home.png" width="600" height="400" alt="Página inicial do projeto"/>
 
 O site oferece questionários com perguntas de múltipla escolha sobre diversas tecnologias. A interface é simples e fácil de usar, permitindo testar e aprimorar seu conhecimento e compreensão dos conceitos fundamentais relacionados a essas tecnologias.
 
@@ -101,7 +101,7 @@ O site oferece questionários com perguntas de múltipla escolha sobre diversas 
 - XML — [Clique aqui e acesse o quiz de XML](https://linkedin-skill-assessments.netlify.app/quiz/XML)
 - jQuery — [Clique aqui e acesse o quiz de jQuery](https://linkedin-skill-assessments.netlify.app/quiz/jQuery)
 
-![https://raw.githubusercontent.com/josafamarengo/skill-assessments/main/src/assets/img/screenshots/question.png](https://raw.githubusercontent.com/josafamarengo/skill-assessments/main/src/assets/img/screenshots/question.png)
+<img src="https://raw.githubusercontent.com/josafamarengo/skill-assessments/main/src/assets/img/screenshots/question.png" width="600" height="400" alt="questionário" />
 
 Usando esse site como ferramenta complementar, você se sentirá mais confiante para fazer o teste de habilidades no LinkedIn Skill Assessments.
 

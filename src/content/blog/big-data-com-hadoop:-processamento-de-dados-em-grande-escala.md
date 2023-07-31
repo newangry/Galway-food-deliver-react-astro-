@@ -49,7 +49,7 @@ No HDFS, os dados são divididos em blocos de tamanho fixo e cada bloco é repli
 
 O HDFS possui uma arquitetura mestre-escravo. O nó mestre, chamado NameNode, é responsável pelo gerenciamento dos metadados do sistema de arquivos, como informações sobre a localização dos blocos de dados e permissões de acesso. Os nós escravos, chamados DataNodes, são responsáveis pelo armazenamento e recuperação dos blocos de dados.
 
-![https://editor.analyticsvidhya.com/uploads/61702hdfspic4.png](https://editor.analyticsvidhya.com/uploads/61702hdfspic4.png)
+![Arquitetura do HDFS](~/assets/hdfs-nodes.webp)
 
  Quando um arquivo é enviado para o HDFS,inicialmente, o arquivo é guardado localmente em um arquivo temporário. À medida que o arquivo vai crescendo e atinge o tamanho definido para um bloco HDFS (geralmente 128MB na versão 2.0 do Hadoop e 64MB na versão 1.0), ocorre a interação com o NameNode, que retorna ao cliente uma lista com a identificação dos DataNodes onde o bloco deverá ser armazenado.
 
@@ -59,8 +59,6 @@ O cliente, então, transfere os dados diretamente para os DataNodes da lista, da
 
 Durante a leitura dos dados armazenados no HDFS, o cliente interage novamente com o NameNode para obter informações sobre a localização dos blocos de dados. Com base nessas informações, o cliente pode buscar diretamente os blocos de dados nos DataNodes onde estão armazenados. O HDFS é otimizado para leituras sequenciais, o que o torna adequado para aplicações de processamento em lote, onde é comum a necessidade de acessar grandes volumes de dados de forma sequencial.
 
-![https://www.cloudduggu.com/hadoop/hdfs/hdfs_architect.png](https://www.cloudduggu.com/hadoop/hdfs/hdfs_architect.png)
-
 ### MapReduce: o paradigma de programação do Hadoop
 
 Uma das principais características do Hadoop é o paradigma de programação MapReduce, que permite processar dados em paralelo em um cluster de computadores.
@@ -69,7 +67,7 @@ O paradigma MapReduce divide o processamento em duas etapas principais: o mapeam
 
 Em seguida, na etapa de redução, os pares chave-valor intermediários são agrupados pela chave e passados por uma função de redução. Essa função pode executar várias operações, como soma, contagem, média, entre outras, sobre os valores correspondentes à mesma chave. O resultado final do processo MapReduce é uma lista de pares chave-valor resultante das operações de redução.
 
-![https://www.todaysoftmag.com/images/articles/tsm33/large/a11.png](https://www.todaysoftmag.com/images/articles/tsm33/large/a11.png)
+![Processo de contagem de palavras no MapReduce](~/assets/mapreduce.webp)
 
 O modelo MapReduce oferece uma abordagem poderosa e escalável para o processamento de grandes conjuntos de dados. Ele permite que desenvolvedores escrevam código simples e expressivo para realizar tarefas de processamento distribuído sem se preocupar com os detalhes de gerenciamento de clusters.
 

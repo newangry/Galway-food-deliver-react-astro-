@@ -2,7 +2,7 @@
 title: SERPRO oferece 602 vagas com inicial de R$ 9 mil
 description: Se uma vaga de emprego com salário de mais de 9 mil reais, além de diversos benefícios e a possibilidade de trabalho remoto te interessa, essa notícia é para você.
 pubDate: '2023-04-05'
-cover: ~/assets/placeholder-hero.png
+cover: ~/assets/serpro.webp
 coverAlt: 'Fachada do prédio do SERPRO'
 tags: 
     - Concurso Público
