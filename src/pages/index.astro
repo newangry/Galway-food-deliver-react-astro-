@@ -52,9 +52,6 @@ const featuredSeries = (await getCollection("series")).filter((s) => s.data.feat
           <span>RSS</span>
         </a>
       </div>
-      <div class="max-w-3xl mx-auto">
-        <SearchBar />
-      </div>
     </div>
     {
       featuredPosts.length > 0 && (

@@ -1,9 +1,9 @@
 ---
 import Home from "~icons/mdi/home";
-import Search from "~icons/mdi/magnify";
 
 import ToggleTheme from "./ToggleTheme";
 import ScrollToTopButton from "./ScrollToTopButton";
+import SearchButton from "./SearchButton.astro";
 
 function handleOnClick() {
   document.body.scrollTop = 0; // For Safari
@@ -19,7 +19,7 @@ function handleOnClick() {
       </a>
     </li>
     <li class="text-white text-xl">
-      <Search />
+      <SearchButton />
     </li>
     <li class="text-white">
       <ToggleTheme client:idle />

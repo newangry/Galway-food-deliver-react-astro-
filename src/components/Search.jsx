@@ -59,20 +59,19 @@ function Search({ searchList }) {
           value={query}
           onChange={handleOnSearch}
           className="block w-full p-4 pl-10 text-sm 
-                                text-gray-900 
-                               border border-gray-300
-                               rounded-lg bg-gray-50
-
+                                text-gray-900 dark:text-white
+                               border border-zinc-300
+                               rounded-lg bg-zinc-50 dark:bg-zinc-800
                                focus:outline-none
                                focus:ring-blue-500
                                focus:border-blue-500"
-          placeholder="Search for anything..."
+          placeholder="Procure um artigo por assunto ou título"
         />
       </div>
 
       {query.length > 1 && (
         <div className="my-4">
-          Found {posts.length} {posts.length === 1 ? "result" : "results"} for '{query}'
+          {posts.length === 1 ? "Encontrado" : "Encontrados"} {posts.length} {posts.length === 1 ? "resultado" : "resultados"} para '{query}'
         </div>
       )}
 
@@ -81,12 +80,14 @@ function Search({ searchList }) {
           posts.map((post) => (
             <li className="py-2">
               <a
-                className="text-lg text-blue-700 hover:text-blue-900 hover:underline underline-offset-2"
-                href={`/${post.frontmatter.slug}`}
+                className="group"
+                href={`/${post.file.replace("/opt/build/repo/src/content/","").replace(".md", "").replace(".mdx", "")}`}
               >
-                {post.frontmatter.title}
+                <h2 className="text-lg text-blue-800 dark:text-blue-500 group-hover:text-blue-950 dark:group-hover:text-blue-400 group-hover:underline underline-offset-2">
+                  {post.frontmatter.title}
+                </h2>
+                <p className="text-sm text-zinc-800 dark:text-zinc-300">{post.frontmatter.description}</p>
               </a>
-              <p className="text-sm text-gray-800">{post.frontmatter.description}</p>
             </li>
           ))}
       </ul>
