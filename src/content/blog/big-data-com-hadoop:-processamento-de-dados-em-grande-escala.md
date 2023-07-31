@@ -43,8 +43,6 @@ Como uma proposta para superar os desafios do processamento de grandes quantidad
 
 ## Arquitetura e componentes do Hadoop
 
-![https://analyticsbr.com.br/wp-content/uploads/2020/11/ecossistema-hadoop.png](https://analyticsbr.com.br/wp-content/uploads/2020/11/ecossistema-hadoop.png)
-
 ### HDFS: o sistema de arquivos distribuídos do Hadoop
 
 No HDFS, os dados são divididos em blocos de tamanho fixo e cada bloco é replicado em vários nós do cluster. Essa replicação dos dados tem o objetivo de garantir a redundância e a recuperação de falhas. A divisão dos dados em blocos permite que o processamento seja paralelizado e distribuído entre os nós do cluster.
