@@ -9,7 +9,7 @@ citations: [
     {
         author: 'DEVMEDIA',
         title: ' Hadoop Tutorial: Fundamentos e Instalação do Hadoop.',
-        url: 'https://hadoop.apache.org/'
+        url: 'https://www.devmedia.com.br/hadoop-fundamentos-e-instalacao/29466/'
     },
     {
         author: 'ORACLE',

@@ -1,4 +1,13 @@
 ---
+import MdiTwitter from "~icons/mdi/twitter"
+import MdiFacebook from "~icons/mdi/facebook"
+import MdiLinkedin from "~icons/mdi/linkedin"
+import MdiWhatsapp from "~icons/mdi/whatsapp"
+import MdiTelegram from "~icons/mdi/telegram"
+import MdiReddit from "~icons/mdi/reddit"
+import MdiEmail from "~icons/mdi/email"
+import MdiPinterest from "~icons/mdi/pinterest"
+
 import { CollectionEntry, getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "./BaseLayout.astro";
@@ -110,6 +119,51 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
             </div>
           )
         }
+        <div>
+        <h3>Compartilhe esse artigo</h3>
+        <div class="flex space-x-4 items-center">
+          <a
+            href={`https://twitter.com/intent/tweet?text=${title}&url=${url}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="no-underline bg-[#1DA1F2] text-white hover:bg-[#1da0f2dc] transition-colors duration-300 ease-in-out font-semibold uppercase tracking-wider p-1 px-2 rounded"
+          >
+            <MdiTwitter />
+          </a>
+          <a
+            href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="no-underline bg-[#3B5998] text-white hover:bg-[#4267B2] transition-colors duration-300 ease-in-out font-semibold uppercase tracking-wider p-1 px-2 rounded"
+          >
+            <MdiFacebook />
+          </a>
+          <a
+            href={`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}&summary=${description}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="no-underline bg-[#0077B5] text-white hover:bg-[#0077B5dc] transition-colors duration-300 ease-in-out font-semibold uppercase tracking-wider p-1 px-2 rounded"
+          >
+            <MdiLinkedin />
+          </a>
+          <a
+            href={`https://api.whatsapp.com/send?text=${title} ${url}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="no-underline bg-[#25D366] text-white hover:bg-[#20b657] transition-colors duration-300 ease-in-out font-semibold uppercase tracking-wider p-1 px-2 rounded"
+          >
+            <MdiWhatsapp />
+          </a>
+          <a
+            href={`https://telegram.me/share/url?url=${url}&text=${title}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="no-underline bg-[#0088CC] text-white hover:bg-[#0077B5] transition-colors duration-300 ease-in-out font-semibold uppercase tracking-wider p-1 px-2 rounded"
+          >
+            <MdiTelegram />
+          </a>
+      </div>
+    </div>
       </div>
       {
         headings.length > 0 && (
