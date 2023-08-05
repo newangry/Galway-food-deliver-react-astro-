@@ -1,7 +1,7 @@
 ---
 title: Como fazer um aplicativo para o meu negócio?
 description: Descubra como levar o seu negócio para o próximo nível e oferecer aos seus clientes uma experiência personalizada e cativante.
-featured: true
+featured: false
 pubDate: '2023-04-01'
 cover: ~/assets/placeholder-hero.png
 coverAlt: 'Homem negro segurando celular com as duas mãos.'

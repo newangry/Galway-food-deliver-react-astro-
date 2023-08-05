@@ -1,7 +1,6 @@
 ---
 title: Por qual linguagem de programação começar.
 description: Na dúvida em qual linguagem escolher para começar a aprender programação? Este artigo fornece orientações úteis para ajudá-lo a escolher a melhor opção.
-featured: true
 pubDate: '2023-03-06'
 cover: ~/assets/placeholder-hero.png
 coverAlt: 'Homem segurando papel com uma "nuvem" de palavras com nomes de linguagens de programação.'
