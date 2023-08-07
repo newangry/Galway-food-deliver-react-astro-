@@ -10,6 +10,10 @@
   font-display: swap;
 }
 
+html {
+  @apply antialiased;
+}
+
 div[data-rehype-pretty-code-fragment] {
   @apply space-y-0;
 }
@@ -47,4 +51,8 @@ div[data-rehype-pretty-code-fragment] .highlighted {
 
 article p {
   @apply text-xl font-light leading-7 tracking-tight text-black dark:text-zinc-50;
+}
+
+ul, ol {
+  @apply font-light tracking-tight text-black dark:text-zinc-50;
 }
