@@ -103,7 +103,7 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
           citations && (
             <div class="citations">
               <h2>Referências:</h2>
-              <ul class="list-none">
+              <ul class="list-none space-y-4">
                 {citations.map((citation: any) => (
                   <li>
                     {citation.author.toUpperCase()}.
@@ -236,7 +236,7 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
 
   .post {
     font-family: "Nunito", sans-serif;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     line-height: 1.75rem;
     color: #4b5563;
   }

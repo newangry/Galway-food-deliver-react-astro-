@@ -53,6 +53,10 @@ article p {
   @apply text-xl font-light leading-7 tracking-tight text-black dark:text-zinc-50;
 }
 
+article ul, article ol {
+  @apply space-y-4;
+}
+
 ul, ol {
   @apply font-light tracking-tight text-black dark:text-zinc-50;
 }
