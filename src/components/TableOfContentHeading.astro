@@ -14,31 +14,15 @@ const { heading } = Astro.props;
 ---
 
 <li class="ml-4">
+  <a class="hover:underline" href={"#" + heading.slug}>
+    {heading.text}
+  </a>
   {
-    heading.subheadings.length > 0 ? (
-      <span id="accordion" class="cursor-pointer">{heading.text}</span>
-      <ul class="list-disc list-outside hidden">
+    heading.subheadings.length > 0 && (
+      <ul class="list-disc list-outside space-y-3 mt-3">
         {heading.subheadings.map((subheading) => (
           <Astro.self heading={subheading} />
         ))}
       </ul>)
-      :
-      <a class="hover:text-slate-400 dark:hover:text-white" href={"#" + heading.slug}>
-    {heading.text}
-  </a>
   }
 </li>
-
-<script>
-  var accordion = document.getElementById("accordion");
-  if (accordion) {
-    accordion.addEventListener("click", function () {
-      var ul = accordion!.nextElementSibling;
-      if (ul!.classList.contains("hidden")) {
-        ul!.classList.remove("hidden");
-      } else {
-        ul!.classList.add("hidden");
-      }
-    });
-  }
-</script>

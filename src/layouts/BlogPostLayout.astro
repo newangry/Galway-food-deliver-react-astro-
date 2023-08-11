@@ -3,10 +3,7 @@ import MdiTwitter from "~icons/mdi/twitter";
 import MdiFacebook from "~icons/mdi/facebook";
 import MdiLinkedin from "~icons/mdi/linkedin";
 import MdiWhatsapp from "~icons/mdi/whatsapp";
-import MdiTelegram from "~icons/mdi/telegram";
 import MdiReddit from "~icons/mdi/reddit";
-import MdiEmail from "~icons/mdi/email";
-import MdiPinterest from "~icons/mdi/pinterest";
 
 import { CollectionEntry, getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
@@ -54,7 +51,7 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
   <div
     class="prose prose-slate max-w-none prose-headings:scroll-my-20 prose-a:underline-offset-2 prose-a:decoration-blue-600 prose-img:rounded-lg dark:prose-invert post"
   >
-    <h1 class="font-extrabold">{title}</h1>
+    <h1 class="font-extrabold text-[clamp(2em,5vw,3em)]">{title}</h1>
     <div class="font-normal text-xs uppercase space-y-2">
       <div class="flex flex-wrap items-center space-x-1">
         <span>
@@ -96,6 +93,18 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
         <div class="not-prose my-10">
           {series && <SeriesCard series={series} order={orderInSeries} />}
         </div>
+        {
+        headings.length > 0 && (
+          <div class="flex flex-col justify-center items-center lg:hidden mt-9">
+            <nav class="text-sm space-y-4 mb-2 border border-zinc-700 bg-white dark:bg-zinc-800 rounded-lg w-[min(600px,100%)] px-6 sm:px-28 py-8">
+              <span class="font-black dark:text-white text-black uppercase">
+                Confira nesse artigo:
+              </span>
+              <TableOfContent headings={headings} />
+            </nav>
+          </div>
+        )
+      }
         <article>
           <slot />
         </article>
@@ -152,27 +161,31 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
               <MdiWhatsapp />
             </a>
             <a
-              href={`https://telegram.me/share/url?url=${url}&text=${title}`}
+              href={`https://www.reddit.com/submit?url=${url}&title=${title}`}
               target="_blank"
               rel="noopener noreferrer"
-              class="no-underline bg-[#0088CC] text-white hover:bg-[#0077B5] transition-colors duration-300 ease-in-out font-semibold uppercase tracking-wider p-1 px-2 rounded"
+              class="no-underline bg-[#FF4500] text-white hover:bg-[#ff4500dc] transition-colors duration-300 ease-in-out font-semibold uppercase tracking-wider p-1 px-2 rounded"
             >
-              <MdiTelegram />
+              <MdiReddit />
             </a>
           </div>
         </div>
       </div>
       {
         headings.length > 0 && (
-          <nav class="hidden text-sm space-y-2 mt-9 mb-2 lg:block lg:w-4/12 h-[80vh] sticky top-20 z-40 overflow-auto">
-            <span class="font-black dark:text-white text-black uppercase">Índice</span>
-            <TableOfContent headings={headings} />
-          </nav>
+          <div class="hidden lg:block lg:w-4/12 h-fit sticky top-20 z-40 mt-9">
+            <nav class="text-sm space-y-2 mb-2 overflow-auto border border-zinc-700 bg-white dark:bg-zinc-800 rounded-lg p-2">
+              <span class="font-black dark:text-white text-black uppercase">
+                Confira nesse artigo:
+              </span>
+              <TableOfContent headings={headings} />
+            </nav>
+            <div class="float-right">
+              <ScrollToTopButton client:idle/>
+            </div>
+          </div>
         )
       }
-    </div>
-    <div class="hidden sm:block float-right">
-      <ScrollToTopButton client:idle />
     </div>
   </div>
 </BaseLayout>
