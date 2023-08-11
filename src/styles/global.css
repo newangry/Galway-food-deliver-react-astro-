@@ -60,3 +60,8 @@ article ul, article ol {
 ul, ol {
   @apply font-light tracking-tight text-black dark:text-zinc-50;
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
