@@ -13,6 +13,7 @@ import ScrollToTopButton from "../components/ScrollToTopButton";
 import { Image } from "astro:assets";
 import SeriesList from "../components/SeriesList.astro";
 import SeriesCard from "../components/SeriesCard.astro";
+import ShareButton from "../components/ShareButton";
 
 type Blog = CollectionEntry<"blog">["data"];
 
@@ -166,6 +167,19 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
           </div>
         </div>
       </div>
+    </div>
+    <div class="flex sm:flex-col justify-between items-center fixed right-6 lg:right-28 bottom-16 bg-gray-300 dark:bg-zinc-700 p-2 rounded-lg text-xl sm:h-24">
+      <span>
+        <ShareButton
+         client:idle
+          url={url}
+          title={title}
+          description={description}
+        />
+      </span>
+      <span class="hidden sm:block">
+        <ScrollToTopButton client:idle/>
+      </span>
     </div>
   </div>
 </BaseLayout>
