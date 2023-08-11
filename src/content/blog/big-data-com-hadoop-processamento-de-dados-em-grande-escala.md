@@ -43,7 +43,7 @@ Como uma proposta para superar os desafios do processamento de grandes quantidad
 
 ## Arquitetura e componentes do Hadoop
 
-### HDFS: o sistema de arquivos distribuídos do Hadoop
+### HDFS
 
 No HDFS, os dados são divididos em blocos de tamanho fixo e cada bloco é replicado em vários nós do cluster. Essa replicação dos dados tem o objetivo de garantir a redundância e a recuperação de falhas. A divisão dos dados em blocos permite que o processamento seja paralelizado e distribuído entre os nós do cluster.
 
@@ -59,7 +59,7 @@ O cliente, então, transfere os dados diretamente para os DataNodes da lista, da
 
 Durante a leitura dos dados armazenados no HDFS, o cliente interage novamente com o NameNode para obter informações sobre a localização dos blocos de dados. Com base nessas informações, o cliente pode buscar diretamente os blocos de dados nos DataNodes onde estão armazenados. O HDFS é otimizado para leituras sequenciais, o que o torna adequado para aplicações de processamento em lote, onde é comum a necessidade de acessar grandes volumes de dados de forma sequencial.
 
-### MapReduce: o paradigma de programação do Hadoop
+### MapReduce
 
 Uma das principais características do Hadoop é o paradigma de programação MapReduce, que permite processar dados em paralelo em um cluster de computadores.
 
@@ -71,43 +71,43 @@ Em seguida, na etapa de redução, os pares chave-valor intermediários são agr
 
 O modelo MapReduce oferece uma abordagem poderosa e escalável para o processamento de grandes conjuntos de dados. Ele permite que desenvolvedores escrevam código simples e expressivo para realizar tarefas de processamento distribuído sem se preocupar com os detalhes de gerenciamento de clusters.
 
-### Hive: processamento de dados em linguagem SQL
+### Hive
 
 O Hive é uma ferramenta do ecossistema Hadoop que permite processar dados por meio de consultas na linguagem SQL (Structured Query Language). Ele fornece uma camada de abstração que permite aos usuários executarem consultas semelhantes a SQL em grandes conjuntos de dados armazenados no Hadoop Distributed File System (HDFS). O Hive traduz essas consultas em tarefas MapReduce, permitindo que os usuários aproveitem a capacidade de processamento distribuído do Hadoop. O Hive é especialmente útil para usuários familiarizados com SQL, fornecendo uma interface familiar para a análise de dados no Hadoop.
 
-### Pig: plataforma de análise e manipulação de dados
+### Pig
 
 O Pig é outra ferramenta do ecossistema Hadoop que oferece uma plataforma de alto nível para a análise e manipulação de dados. Ele fornece uma linguagem de script chamada Pig Latin, que é projetada para expressar transformações de dados de forma concisa e eficiente. O Pig Latin é compilado em tarefas MapReduce pelo Pig, permitindo o processamento distribuído de grandes volumes de dados no Hadoop. O Pig é particularmente adequado para tarefas de ETL (Extração, Transformação e Carga) e para usuários que preferem uma abordagem de programação de alto nível.
 
-### Yarn: estrutura de gerenciamento de recursos
+### Yarn
 
 O Yarn (Yet Another Resource Negotiator) é um componente-chave do ecossistema Hadoop responsável pelo gerenciamento de recursos do cluster. Ele atua como um escalonador e agendador de tarefas, alocando recursos de computação de forma eficiente para as aplicações em execução no cluster. O Yarn permite que várias estruturas de processamento, como MapReduce e Spark, coexistam no mesmo cluster e compartilhem os recursos disponíveis de forma equilibrada. Ele também oferece suporte para recursos como isolamento de tarefas, tolerância a falhas e monitoramento do uso de recursos no cluster.
 
-### HBase: banco de dados NoSQL distribuído
+### HBase
 
 O HBase é um banco de dados NoSQL distribuído, projetado para fornecer acesso aleatório rápido aos dados armazenados no Hadoop. Ele é baseado no modelo de dados de chave-valor e oferece escalabilidade horizontal, permitindo o armazenamento e a recuperação eficientes de grandes volumes de dados. O HBase é altamente escalável e tolerante a falhas, permitindo o processamento de dados em tempo real e a realização de operações de leitura e gravação de forma eficiente.
 
-### Sqoop: integração entre o Hadoop e bancos de dados relacionais
+### Sqoop
 
 O Sqoop é uma ferramenta do ecossistema Hadoop projetada para facilitar a integração entre o Hadoop e bancos de dados relacionais. Ele permite importar dados de bancos de dados relacionais para o Hadoop e exportar dados do Hadoop para bancos de dados relacionais. O Sqoop suporta várias fontes de dados, como MySQL, Oracle, SQL Server, entre outros, e fornece uma maneira conveniente de transferir dados entre esses sistemas e o Hadoop. Ele ajuda a simplificar o processo de ingestão de dados no Hadoop, permitindo que os usuários aproveitem os recursos de processamento distribuído do Hadoop em conjunto com seus sistemas de banco de dados existentes.
 
-### Flume: ingestão de dados em tempo real
+### Flume
 
 O Flume é um componente do ecossistema Hadoop projetado para facilitar a ingestão de dados em tempo real no Hadoop. Ele fornece uma arquitetura escalável e confiável para coletar, agregar e mover grandes volumes de dados em tempo real. O Flume suporta várias fontes de dados, como logs de servidores, feeds RSS, streams de redes sociais, entre outros, e permite o envio desses dados para o Hadoop para processamento posterior. Ele é particularmente útil para casos de uso que exigem a ingestão contínua e em tempo real de dados, como monitoramento de logs ou análise de dados de fluxo.
 
-### Kafka: plataforma de streaming distribuído
+### Kafka
 
 O Kafka é uma plataforma de streaming distribuído que fornece uma solução escalável para a ingestão, armazenamento e processamento de fluxos contínuos de dados em tempo real. Ele permite que os usuários publiquem e assinem fluxos de dados, garantindo a entrega confiável e eficiente dos dados em um ambiente distribuído. O Kafka é amplamente utilizado para casos de uso de streaming em tempo real, como análise de dados em tempo real, monitoramento de eventos e processamento de mensagens em larga escala.
 
-### Oozie: sistema de agendamento e fluxo de trabalho
+### Oozie
 
 O Oozie é um sistema de agendamento e fluxo de trabalho do ecossistema Hadoop. Ele permite que os usuários definam e executem fluxos de trabalho complexos que envolvem várias etapas e dependências. O Oozie oferece suporte a várias ações, como execução de tarefas MapReduce, execução de scripts Pig, execução de consultas Hive, entre outras, permitindo que os usuários coordenem e agendem facilmente a execução de tarefas no Hadoop. Ele fornece uma interface intuitiva para definir fluxos de trabalho e oferece recursos avançados, como retentativas de tarefas, agendamento baseado em tempo e integração com outras ferramentas do ecossistema Hadoop.
 
-### ZooKeeper: serviço de coordenação e sincronização
+### ZooKeeper
 
 O ZooKeeper é um serviço de coordenação e sincronização do ecossistema Hadoop. Ele fornece um ambiente confiável para coordenar e sincronizar as atividades distribuídas em um cluster Hadoop. O ZooKeeper permite que os aplicativos distribuídos compartilhem informações, coordenem suas atividades e lidem com situações de falha. Ele oferece recursos como eleição de líderes, bloqueios distribuídos, notificações assíncronas e gerenciamento de configurações, fornecendo uma base sólida para a construção de aplicativos distribuídos robustos no ecossistema Hadoop.
 
-### Apache Spark: processamento de dados em memória
+### Apache Spark
 
 O Apache Spark é um poderoso componente do ecossistema Hadoop que oferece um mecanismo de processamento de dados em memória. Ele fornece uma interface de programação simples e rica para a execução de análises de dados distribuídas em larga escala. O Spark oferece suporte a várias linguagens de programação, como Java, Scala e Python, e fornece bibliotecas extensas para processamento de dados em lotes, processamento de fluxo, aprendizado de máquina e processamento de gráficos. O Spark é conhecido por sua velocidade e eficiência, especialmente para cargas de trabalho que exigem iterações rápidas e acesso rápido aos dados.
 

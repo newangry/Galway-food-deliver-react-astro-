@@ -19,10 +19,24 @@ const { heading } = Astro.props;
   </a>
   {
     heading.subheadings.length > 0 && (
-      <ul class="list-disc list-outside space-y-3 mt-3">
+      <ul class="list-disc list-outside space-y-2 mt-3">
         {heading.subheadings.map((subheading) => (
           <Astro.self heading={subheading} />
         ))}
       </ul>)
   }
 </li>
+
+<script>
+  var accordion = document.getElementById("accordion");
+  if (accordion) {
+    accordion.addEventListener("click", function () {
+      var ul = accordion!.nextElementSibling;
+      if (ul!.classList.contains("hidden")) {
+        ul!.classList.remove("hidden");
+      } else {
+        ul!.classList.add("hidden");
+      }
+    });
+  }
+</script>
