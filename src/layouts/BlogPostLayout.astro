@@ -94,13 +94,13 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
           {series && <SeriesCard series={series} order={orderInSeries} />}
         </div>
         {
-        headings.length > 0 && (
-          <div class="flex flex-col justify-center items-center mt-9">
+          headings.length > 0 && (
+            <div id="table-of-content" class="flex flex-col justify-center items-center mt-9">
               <TableOfContent headings={headings} />
-          </div>
-        )
-      }
-        <article>
+            </div>
+          )
+        }
+        <article class="relative">
           <slot />
         </article>
         {
@@ -166,7 +166,6 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
           </div>
         </div>
       </div>
-      
     </div>
   </div>
 </BaseLayout>
