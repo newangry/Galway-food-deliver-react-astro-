@@ -81,7 +81,7 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
       </div>
     </div>
     <div class="not-prose">
-      {cover && coverAlt && <Image class="my-10 mb-1 rounded-lg" src={cover} alt={coverAlt} loading="lazy"/>}
+      {cover && coverAlt && <Image class="my-10 mb-1 rounded-lg" src={cover} alt={coverAlt} loading="eager"/>}
     </div>
     <div class="md:flex space-x-10">
       <div class="w-full">
