@@ -5,7 +5,6 @@ import MdiFacebook from "~icons/mdi/facebook";
 import MdiLinkedin from "~icons/mdi/linkedin";
 import MdiWhatsapp from "~icons/mdi/whatsapp";
 import MdiReddit from "~icons/mdi/reddit";
-import LinkIcon from "~icons/ph/link-simple";
 
 import ShareIcon from "~icons/material-symbols/ios-share";
 
@@ -22,10 +21,6 @@ function ShareButton({ title, description, url }: ShareButtonProps){
       <ShareIcon onClick={() => setShowShareItems(!showShareItems)} />
       {showShareItems && (
         <div class="flex flex-col space-y-4 items-start absolute bottom-10 right-0 lg:-right-16 z-30 w-auto h-auto  bg-zinc-300 dark:bg-zinc-700 rounded-lg p-4">
-          <span class="flex items-center space-x-2 text-black dark:text-white text-sm">
-            <LinkIcon />
-            <span>Copiar link</span>
-          </span>
           <a
             href={`https://twitter.com/intent/tweet?text=${title}&url=${url}`}
             target="_blank"
