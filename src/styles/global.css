@@ -50,7 +50,7 @@ div[data-rehype-pretty-code-fragment] .highlighted {
 }
 
 article p {
-  @apply text-xl font-light leading-7 tracking-tight text-black dark:text-zinc-50;
+  @apply text-lg font-light leading-7 tracking-tight text-black dark:text-zinc-50;
 }
 
 article ul, article ol {
