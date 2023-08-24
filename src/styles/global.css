@@ -57,6 +57,30 @@ article ul, article ol {
   @apply space-y-4;
 }
 
+article table {
+  @apply w-full text-left text-black dark:text-white;
+}
+
+article table thead {
+  @apply bg-gray-400 dark:bg-gray-800;
+}
+
+article table th {
+  @apply px-4 py-2 font-light text-sm text-center border dark:border-gray-700;
+}
+
+article table td {
+  @apply font-light text-sm px-20 py-2 border dark:border-gray-700;
+}
+
+article table td:first-child {
+  @apply font-light text-sm px-4 py-2 border dark:border-gray-700;
+}
+
+article table tr:nth-child(even) {
+  @apply bg-gray-300 dark:bg-gray-800;
+}
+
 ul, ol {
   @apply font-light tracking-tight text-black dark:text-zinc-50;
 }
