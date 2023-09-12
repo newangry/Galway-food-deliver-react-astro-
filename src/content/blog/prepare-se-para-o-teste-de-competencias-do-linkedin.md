@@ -1,7 +1,6 @@
 ---
 title: 'Prepare-se para os testes do Linkedin'
 description: 'Aprenda como se preparar para os testes de competência do Linkedin e aumente suas chances de sucesso em processos seletivos.'
-featured: true
 pubDate: '2023-05-07'
 cover: ~/assets/linkedin.webp
 coverAlt: 'Celular com a loja de aplicativos da Apple aberta no aplicativo do Linkedin'

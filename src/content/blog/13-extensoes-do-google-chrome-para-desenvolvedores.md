@@ -3,8 +3,6 @@ title: 13 Extensões do Chrome para Desenvolvedores
 description: Veja a lista das melhores extensões para profissionais de TI que podem ajudar a aumentar a produtividade, facilitar o trabalho e melhorar a segurança.
 featured: false
 pubDate: '2023-02-02'
-cover: ~/assets/placeholder-hero.png
-coverAlt: 'Fundo Amarelo Escuro, com ícone do Google Chrome e Frase: 10 Extensões do Chrome'
 tags: 
     - dicas
 ---

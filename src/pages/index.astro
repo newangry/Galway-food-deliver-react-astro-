@@ -1,7 +1,7 @@
 ---
 import MdiLinkedin from "~icons/mdi/linkedin";
 import MdiGithub from "~icons/mdi/github";
-import MdiRss from "~icons/mdi/rss";
+import MdiYouTube from "~icons/mdi/youtube";
 
 import PostsList from "../components/PostsList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -44,12 +44,12 @@ const featuredSeries = (await getCollection("series")).filter((s) => s.data.feat
           <span>GitHub</span>
         </a>
         <a
-          href="/rss.xml"
+          href="https://www.youtube.com/@josafa.marengo"
           target="_blank"
           class="inline-flex items-center justify-center space-x-2 py-2 px-3 rounded-md text-white bg-gray-800 hover:bg-gray-700"
         >
-          <MdiRss />
-          <span>RSS</span>
+          <MdiYouTube />
+          <span>YouTube</span>
         </a>
       </div>
     </div>

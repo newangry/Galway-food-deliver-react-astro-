@@ -2,8 +2,6 @@
 title: Salário inicial de mais de R$ 5 mil, sem experiência.
 description: Descubra a oportunidade única de trabalhar no Banco do Brasil, um dos maiores bancos do país, na área de Tecnologia da Informação.
 pubDate: '2023-01-30'
-cover: ~/assets/placeholder-hero.png
-coverAlt: 'Fachada do prédio do Banco do Brasil'
 tags: 
     - Concurso Público
 ---

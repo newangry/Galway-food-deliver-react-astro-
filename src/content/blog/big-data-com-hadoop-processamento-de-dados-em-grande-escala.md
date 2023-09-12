@@ -1,10 +1,7 @@
 ---
 title: "Big Data com Hadoop: Processamento de Dados em Grande Escala"
 description: Quer saber como o Hadoop pode ajudá-lo a analisar grandes volumes de dados? Nesse artigo, apresento o framework e as tecnologias que o compõem.
-featured: true
 pubDate: '2023-07-29'
-cover: ~/assets/placeholder-hero.png
-coverAlt: 'Fundo Amarelo Escuro, com ícone do Google Chrome e Frase: 10 Extensões do Chrome'
 citations: [
     {
         author: 'DEVMEDIA',
