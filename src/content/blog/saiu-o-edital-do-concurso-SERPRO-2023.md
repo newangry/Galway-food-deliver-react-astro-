@@ -5,7 +5,7 @@ pubDate: '2023-04-19'
 cover: ~/assets/serpro.webp
 coverAlt: 'Fachada do prédio do SERPRO'
 tags: 
-    - Concurso Público
+    - concurso
 ---
 Notícia quentinha para quem busca uma carreira estável e desafiadora: acaba de sair o edital do concurso público do SERPRO, uma das maiores empresas de tecnologia do país! Esta pode ser a sua chance de ingressar em uma empresa reconhecida e crescer profissionalmente. Leia mais abaixo sobre os detalhes do concurso e comece já a se preparar para a prova.
 
@@ -24,7 +24,5 @@ Os candidatos que solicitarem concorrer às vagas reservadas às pessoas com def
 Aos empregados do SERPRO é ofertada a possibilidade de modalidade de trabalho remoto, o que facilita a conciliação entre a vida profissional e pessoal.
 
 As inscrições serão abertas a partir do dia 24/4/2023 e seguirão até o dia 2/6/2023. A prova objetiva, primeira etapa do processo seletivo, será realizada no dia 23/7/2023. Já a prova de conhecimentos aplicados, segunda fase do concurso, será realizada nos dias 26 e 27/8/2023. É importante que os candidatos fiquem atentos aos prazos e se preparem adequadamente para garantir um bom desempenho nas provas.
-
-[Acesse aqui o edital do SERPRO](https://josafa.com.br/assets/documents/ED_1_SERPRO_2023_ABERTURA.PDF)
 
 Concluindo, o concurso do SERPRO é uma ótima oportunidade para profissionais qualificados que buscam estabilidade e uma carreira sólida no setor de tecnologia da informação. Com uma boa remuneração e benefícios, além de um ambiente de trabalho inovador e desafiador, o SERPRO oferece a chance de desenvolvimento profissional em uma empresa referência na área de tecnologia, com oportunidades de aprendizado e crescimento contínuo. Para aqueles que possuem as habilidades e conhecimentos necessários para desempenhar as funções exigidas no concurso, essa é uma excelente chance de ingressar em uma carreira promissora e garantir estabilidade no mercado de trabalho.

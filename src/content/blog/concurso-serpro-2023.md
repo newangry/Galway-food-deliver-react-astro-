@@ -5,7 +5,7 @@ pubDate: '2023-04-05'
 cover: ~/assets/serpro.webp
 coverAlt: 'Fachada do prédio do SERPRO'
 tags: 
-    - Concurso Público
+    - concurso
 ---
 
 Se uma vaga de emprego com salário de mais de 9 mil reais, além de diversos benefícios e a possibilidade de trabalho remoto te interessa, essa notícia é para você. O Serpro, empresa de tecnologia do Governo Federal, irá abrir um concurso público para o cargo de Analista com especialização em Tecnologia. Serão cerca de 600 vagas em todo o Brasil, com a possibilidade de atuar em regime de trabalho remoto, inclusive no exterior, conforme as condições estabelecidas em normativos vigentes.
@@ -26,7 +26,7 @@ A banca organizadora escolhida para o processo seletivo é o Centro Brasileiro d
 
 ## Último edital do SERPRO.
 
-Também sob organização do Cebraspe, o último concurso do SERPRO ocirreu em 2021 e ofertou 165 vagas temporárias para o cargo de Analista, nas especialidades de Ciência de Dados e Desenvolvimento de Sistemas. Veja as matérias que foram cobradas naquele edital:
+Também sob organização do Cebraspe, o último concurso do SERPRO ocorreu em 2021 e ofertou 165 vagas temporárias para o cargo de Analista, nas especialidades de Ciência de Dados e Desenvolvimento de Sistemas. Veja as matérias que foram cobradas naquele edital:
 
 ### Conhecimentos básicos:
 

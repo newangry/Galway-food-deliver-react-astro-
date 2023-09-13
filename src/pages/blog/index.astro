@@ -8,7 +8,7 @@ const posts = (await getCollection("blog"))
   .filter((post) => !post.data.planned);
 ---
 
-<BaseLayout title="All posts">
+<BaseLayout title="Blog | Josafá Marengo">
   <h1 class="text-black dark:text-white pb-10 text-4xl">Blog</h1>
   <PostsList posts={posts} />
 </BaseLayout>
