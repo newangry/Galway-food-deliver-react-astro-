@@ -18,52 +18,58 @@ export interface Props {
   description?: string;
   pubDate?: Date;
   updatedDate?: Date;
-  image?: string;
+  cover?: string;
   isPost?: boolean;
   url?: string;
   citations?: Citation[];
 }
 
-const { title, description,pubDate, updatedDate, image, isPost, url, citations } = Astro.props;
+const { title, description, pubDate, updatedDate, cover, isPost, url, citations } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="pt-BR" class="font-sans dark">
   <head>
-    <BaseHead title={title} description={description} />
-    {isPost && (
-      <Schema
-        item={
-          {
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: title,
-            description,
-            image: image,
-            datePublished: pubDate?.toLocaleString(),
-            dateModified: updatedDate?.toLocaleString(),
-            author: {
-              "@type": "Person",
-              name: "Josafá Marengo",
-            },
-            inLanguage: "pt-BR",
-            "url": url,
-            "citation": citations?.map((citation) => ({
-              "@type": "CreativeWork",
-              "headline": citation.title,
-              "url": citation.url,
-              "author": {
-                "@type": "Organization",
-                "name": citation.author,
+    <BaseHead title={title} description={description} ogImage={cover} />
+    {
+      isPost && (
+        <Schema
+          item={
+            {
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "josafa.com.br",
               },
-            })),
-          } as any
-        }
-      />
-    )}
+              headline: title,
+              description,
+              image: cover,
+              datePublished: pubDate?.toLocaleString(),
+              dateModified: updatedDate?.toLocaleString(),
+              author: {
+                "@type": "Person",
+                name: "Josafá Marengo",
+              },
+              inLanguage: "pt-BR",
+              url: url,
+              citation: citations?.map((citation) => ({
+                "@type": "CreativeWork",
+                headline: citation.title,
+                url: citation.url,
+                author: {
+                  "@type": "Organization",
+                  name: citation.author,
+                },
+              })),
+            } as any
+          }
+        />
+      )
+    }
   </head>
   <body
-    class="relative container mx-auto md:max-w-3xl px-4  space-y-10 flex flex-col justify-between h-screen text-zinc-800 bg-zinc-50 dark:text-zinc-200 dark:bg-zinc-900"
+    class="relative container mx-auto md:max-w-3xl px-4 space-y-10 flex flex-col justify-between h-screen text-zinc-800 bg-zinc-50 dark:text-zinc-200 dark:bg-zinc-900"
   >
     <Header />
     <main class="flex-grow sm:pt-20">

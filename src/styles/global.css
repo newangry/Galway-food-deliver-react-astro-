@@ -58,7 +58,7 @@ article ul, article ol {
 }
 
 article table {
-  @apply w-full text-left text-black dark:text-white;
+  @apply w-full text-left text-black dark:text-white block overflow-auto;
 }
 
 article table thead {

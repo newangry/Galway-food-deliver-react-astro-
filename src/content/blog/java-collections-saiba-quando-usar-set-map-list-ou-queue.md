@@ -2,19 +2,20 @@
 title: "Java Collections: Saiba quando usar Set, Map, List ou Queue."
 description: Descubra quando usar Set, Map, List ou Queue em Java. Aprenda a otimizar sua estrutura de dados para atender às necessidades específicas do seu projeto.
 pubDate: '2023-09-12'
+cover: https://ik.imagekit.io/josafa/OG%20Images/java-collections?updatedAt=1694788101302
 citations: [
     {
-        author: 'ARAÚJO, C',
+        author: 'Carlos Araújo - DevMedia',
         title: 'Java Collections: Como utilizar Collections.',
-        url: 'ttps://www.devmedia.com.br/java-collections-como-utilizar-collections/18450'
+        url: 'https://www.devmedia.com.br/java-collections-como-utilizar-collections/18450'
     },
     {
-        author: 'BAELDUNG',
+        author: 'Baeldung',
         title: 'Choosing the Right Java Collection.',
         url: 'https://www.baeldung.com/java-choose-list-set-queue-map'
     },
     {
-        author: 'FEOFILOFF, P',
+        author: 'Paulo Feofiloff - Instituto de Matemática e Estatística da USP',
         title: 'O que é análise amortizada de algoritmos?',
         url: 'https://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/amortized.html'
     }

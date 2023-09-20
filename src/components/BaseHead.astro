@@ -4,18 +4,23 @@ import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE } from "../consts";
 export interface Props {
   title?: string;
   description?: string;
+  ogImage?: string
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description } = Astro.props;
+const { title, description, ogImage } = Astro.props;
 
 function getTitle(title?: string) {
-  return title ? `${title} | ${SITE_NAME}` : SITE_TITLE;
+  return title ? title : SITE_TITLE;
 }
 
 function getDescription(description?: string) {
   return description ? description : SITE_DESCRIPTION;
+}
+
+function getOgImage(image?: string) {
+  return image ? image : "https://josafa.com.br/apple-touch-icon.png";
 }
 ---
 
@@ -42,11 +47,11 @@ function getDescription(description?: string) {
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={getTitle(title)} />
 <meta property="og:description" content={getDescription(description)} />
-<meta property="og:image" content="https://josafa.com.br/apple-touch-icon.png" />
+<meta property="og:image" content={getOgImage(ogImage)} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={getTitle(title)} />
 <meta property="twitter:description" content={getDescription(description)} />
-<meta property="twitter:image" content="https://josafa.com.br/apple-touch-icon.png" />
+<meta property="twitter:image" content={getOgImage(ogImage)} />

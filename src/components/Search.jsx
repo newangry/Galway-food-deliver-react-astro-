@@ -83,10 +83,11 @@ function Search({ searchList }) {
                 className="group"
                 href={`/${post.file.replace("/opt/build/repo/src/content/","").replace(".md", "").replace(".mdx", "")}`}
               >
-                <h2 className="text-lg text-blue-800 dark:text-blue-500 group-hover:text-blue-950 dark:group-hover:text-blue-400 group-hover:underline underline-offset-2">
+                <h2 className="text-lg text-blue-800 dark:text-blue-500 group-hover:text-blue-950 dark:group-hover:text-blue-400 group-hover:underline underline-offset-2 font-medium">
                   {post.frontmatter.title}
                 </h2>
                 <p className="text-sm text-zinc-800 dark:text-zinc-300">{post.frontmatter.description}</p>
+                
               </a>
             </li>
           ))}

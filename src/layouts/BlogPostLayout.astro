@@ -42,13 +42,13 @@ const {
 const series = (await getCollection("series")).find((s) => s.data.id === seriesId);
 ---
 
-<BaseLayout {title} {description} {pubDate} {updatedDate} {url} {citations} isPost>
+<BaseLayout {title} {description} {pubDate} {updatedDate} {url} {citations} {cover} isPost>
   <div
     class="prose prose-slate max-w-none prose-headings:scroll-my-20 prose-a:underline-offset-2 prose-a:decoration-blue-600 prose-img:rounded-lg dark:prose-invert post"
   >
     <h1 class="font-extrabold text-[clamp(2em,5vw,3em)]">{title}</h1>
     <div class="font-normal text-xs uppercase space-y-2">
-      <div class="flex flex-wrap items-center space-x-1">
+      <div class="flex flex-wrap items-center space-x-1 text-black dark:text-white">
         <span>
           <FormattedDate date={pubDate} />
         </span>
@@ -69,7 +69,7 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
         {
           tags.map((tag: unknown) => (
             <a
-              href={`/tags/${tag}`}
+              href={`/tags/${tag}/`}
               class="no-underline bg-zinc-800 text-white dark:text-black dark:bg-zinc-300 hover:bg-zinc-950 dark:hover:bg-zinc-100 
               transition-colors duration-300 ease-in-out text-xs font-extrabold uppercase 
               p-1 px-4 rounded"
@@ -79,9 +79,6 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
           ))
         }
       </div>
-    </div>
-    <div class="not-prose">
-      {cover && coverAlt && <Image class="my-10 mb-1 rounded-lg" src={cover} alt={coverAlt} loading="eager"/>}
     </div>
     <div class="md:flex space-x-10">
       <div class="w-full">
@@ -102,13 +99,13 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
           citations && (
             <div class="citations">
               <h2>Referências:</h2>
-              <ul class="list-none space-y-4">
+              <ul class="list-none space-y-2 -translate-x-8">
                 {citations.map((citation: any) => (
-                  <li>
-                    {citation.author.toUpperCase()}.
-                    <a href={citation.url} target="_blank" rel="noopener noreferrer">
+                  <li class="py-2">
+                    <a href={citation.url} target="_blank" rel="noopener noreferrer" class="text-lg">
                       {citation.title}
-                    </a>
+                    </a><br>
+                    {citation.author}
                   </li>
                 ))}
               </ul>

@@ -65,7 +65,7 @@ const featuredSeries = (await getCollection("series")).filter((s) => s.data.feat
       <div class="flex items-center justify-between space-x-2">
         <h2 class="text-3xl text-black dark:text-white">Últimos Posts</h2>
         <a
-          href="/blog"
+          href="/blog/"
           class="inline-flex items-center justify-center py-0.5 px-3 bg-gray-800 hover:bg-blue-800 rounded-full text-sm text-white transition-colors duration-300 ease-in-out"
           >Ver todos</a
         >
@@ -78,7 +78,7 @@ const featuredSeries = (await getCollection("series")).filter((s) => s.data.feat
           <div class="flex items-center justify-between space-x-2">
             <h2 class="text-3xl text-black dark:text-white">Séries</h2>
             <a
-              href="/series"
+              href="/series/"
               class="inline-flex items-center justify-center py-0.5 px-3 bg-blue-600 hover:bg-blue-800 rounded-full text-sm text-white"
             >
               Ver todas
@@ -89,5 +89,5 @@ const featuredSeries = (await getCollection("series")).filter((s) => s.data.feat
       )
     }
   </div>
-  <a rel="me" href="https://mastodon.social/@josafa"></a>
+  <a rel="me" href="https://mastodon.social/@josafa" aria-label="Mastodon"></a>
 </BaseLayout>
