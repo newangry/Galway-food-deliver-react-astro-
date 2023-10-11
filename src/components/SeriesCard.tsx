@@ -17,9 +17,9 @@ export default function ({ series, posts, order }: Props) {
   };
 
   return (
-    <div class="bg-zinc-50 shadow shadow-zinc-500 dark:shadow-none dark:bg-zinc-900 rounded-lg">
+    <div class="bg-zinc-50 shadow shadow-zinc-500 dark:shadow-none dark:bg-zinc-800 rounded-lg">
       <button
-        class={`p-5 rounded-lg text-left space-y-2 hover:bg-zinc-200 dark:hover:bg-zinc-800 ${
+        class={`w-full p-5 rounded-lg text-left space-y-2 hover:bg-zinc-200 dark:hover:bg-zinc-800 ${
           isOpen ? "border-b-2 border-zinc-600 rounded-b-lg bg-zinc-300 dark:bg-zinc-700" : ""
         }`}
         onClick={handleOnClick}

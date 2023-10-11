@@ -8,7 +8,7 @@ const posts = (await getCollection("blog"))
   .filter((post) => !post.data.planned);
 ---
 
-<BaseLayout title="Blog" description="Desvende o mundo da tecnologia com dicas práticas e tendências atualizadas. Leia aqui os melhores artigos sobre programação e concursos públicos na área de TI. ">
+<BaseLayout title="Artigos sobre programação e concursos na área de TI" description="Desvende o mundo da tecnologia com dicas práticas e tendências atualizadas. Leia aqui os melhores artigos sobre programação e concursos públicos na área de TI. ">
   <h1 class="text-black dark:text-white pb-10 text-4xl">Blog</h1>
   <PostsList posts={posts} />
 </BaseLayout>

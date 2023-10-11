@@ -4,6 +4,8 @@ description: Domine Java com os 10 métodos de Strings mais utilizados. Aprenda 
 pubDate: '2023-08-20'
 cover: ~/assets/letras.webp
 coverAlt: 'Blocos de Letras'
+seriesId: 'java'
+orderInSeries: 0
 citations: [
     {
         author: 'JAIN, S',

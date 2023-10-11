@@ -3,6 +3,8 @@ title: "Java Collections: Saiba quando usar Set, Map, List ou Queue."
 description: Descubra quando usar Set, Map, List ou Queue em Java. Aprenda a otimizar sua estrutura de dados para atender às necessidades específicas do seu projeto.
 pubDate: '2023-09-12'
 cover: https://ik.imagekit.io/josafa/OG%20Images/java-collections?updatedAt=1694788101302
+seriesId: 'java'
+orderInSeries: 1
 citations: [
     {
         author: 'Carlos Araújo - DevMedia',
