@@ -2,22 +2,28 @@
 import ToggleTheme from "./ToggleTheme";
 import Popover from "./Popover.astro";
 import SearchButton from "./SearchButton.astro";
+
+import MdiLinkedin from "~icons/mdi/linkedin";
+import MdiGithub from "~icons/mdi/github";
+import MdiYouTube from "~icons/mdi/youtube";
+import MdiRss from "~icons/mdi/rss";
 ---
 
 <header
-  class="hidden sm:block px-4 py-3 fixed top-0 left-0 right-0 z-50 bg-zinc-50 dark:bg-zinc-900"
+  class="hidden sm:block fixed top-0 left-0 right-0 z-50 bg-gradient-to-t from-zinc-950 from-10% to-zinc-800 text-white"
 >
-  <div class="container mx-auto md:max-w-3xl lg:max-w-5xl flex justify-between items-center">
+  <div class="container mx-auto py-2 px-4 md:max-w-3xl lg:max-w-5xl flex justify-between items-center">
     <a href="/">
       <img
         src="/apple-touch-icon.png"
         alt="Josafa"
         width="30"
         height="30"
-        class="h-8 w-8 sm:h-10 sm:w-10 rounded-full"
+        class="h-8 w-8 sm:h-10 sm:w-10 rounded-full shadow-lg"
       />
     </a>
-    {/*<nav>
+    {
+      /*<nav>
       <ul class="flex space-x-1 text-sm">
         <li
           class="px-4 py-2 text-sm hover:bg-zinc-200 cursor-pointer dark:hover:text-white dark:hover:bg-zinc-800 rounded-lg"
@@ -41,12 +47,54 @@ import SearchButton from "./SearchButton.astro";
           </ul>
         </Popover>
       </ul>
-    </nav>*/}
+    </nav>*/
+    }
     <div class="flex justify-between items-center w-20">
       <div class="text-2xl">
         <SearchButton />
       </div>
       <ToggleTheme client:idle />
+    </div>
+  </div>
+  <div class="bg-zinc-50 dark:bg-zinc-800 z-0 shadow h-8 flex items-center">
+    <div class="flex justify-between container mx-auto px-4 md:max-w-3xl lg:max-w-5xl">
+      <nav>
+        <ul class="flex font-normal space-x-4">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul class="flex space-x-4">
+          <li>
+            <a href="https://github.com/josafamarengo" target="_blank" rel="noopener noreferrer" class="text-[#171515] dark:text-white">
+              <MdiGithub style={{
+                fontSize: 16
+              }}/>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/josafamarengo" target="_blank" rel="noopener noreferrer" class="text-[#0e76e8] dark:text-white">
+              <MdiLinkedin style={{
+                fontSize: 16
+              }}/>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com/@josafa.marengo" target="_blank" rel="noopener noreferrer" class="text-[#c4302b] dark:text-white">
+              <MdiYouTube style={{
+                fontSize: 16
+              }} />
+            </a>
+          </li>
+          <li>
+            <a href="https://josafa.com.br/rss.xml" target="_blank" rel="noopenner noreferrer" class="text-[#ee802f] dark:text-white">
+              <MdiRss />
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </header>
