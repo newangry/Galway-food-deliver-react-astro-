@@ -59,8 +59,8 @@ function Search({ searchList }) {
           value={query}
           onChange={handleOnSearch}
           className="block w-full p-4 pl-10
-                                text-gray-900 dark:text-white
-                               border border-zinc-300
+                                text-zinc-900 dark:text-white
+                               border border-zinc-500
                                rounded-lg bg-zinc-50 dark:bg-zinc-800
                                focus:outline-none
                                focus:ring-blue-500
