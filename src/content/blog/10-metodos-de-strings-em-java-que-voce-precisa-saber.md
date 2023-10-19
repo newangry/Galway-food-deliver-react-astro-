@@ -20,6 +20,7 @@ citations: [
 ]
 tags: 
     - java
+    - strings
 ---
 Strings são uma parte essencial de praticamente qualquer código. Por isso, é importante que uma linguagem de programação forneça suporte robusto para a sua manipulação. Dada a importância dessa tarefa, este artigo se propõe a mostrar de forma clara os dez principais métodos para a manipulação de Strings em Java. E vamos a eles! 
 
