@@ -7,13 +7,12 @@ import MdiYoutube from "~icons/mdi/youtube";
 const today = new Date();
 ---
 
-<footer class="flex items-center justify-between py-5">
-  <p class="text-sm">&copy; {today.getFullYear()} Josafá Marengo</p>
-  <div class="flex items-center space-x-1">
+<footer class="flex flex-col items-center justify-between py-16 space-y-8">
+  <div class="flex items-center space-x-2">
     <a
       href="https://linkedin.com/in/josafamarengo"
       target="_blank"
-      class="w-8 h-8 flex items-center justify-center rounded-md p-1.5 hover:bg-slate-300 dark:hover:bg-slate-800"
+      class="w-8 h-8 flex items-center justify-center rounded-md p-1.5 hover:bg-zinc-300 dark:hover:bg-zinc-800"
     >
       <MdiLinkedin />
       <span class="sr-only">Linkedin</span>
@@ -43,4 +42,5 @@ const today = new Date();
       <span class="sr-only">RSS</span>
     </a>
   </div>
+  <p class="text-sm">&copy; {today.getFullYear()} Josafá Marengo</p>
 </footer>
