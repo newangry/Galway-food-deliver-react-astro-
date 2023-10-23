@@ -30,6 +30,18 @@ const { title, description, pubDate, updatedDate, cover, isPost, url, citations 
 <!DOCTYPE html>
 <html lang="pt-BR" class="font-sans dark">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-NBQP8L7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "GT-NBQP8L7");
+    </script>
+
     <BaseHead title={title} description={description} ogImage={cover} />
     {
       isPost && (
