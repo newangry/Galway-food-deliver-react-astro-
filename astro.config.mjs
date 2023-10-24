@@ -8,7 +8,7 @@ import preact from "@astrojs/preact";
 import compress from "astro-compress";
 import Icons from "unplugin-icons/vite";
 const rehypePrettyCodeOptions = {
-  theme: "dracula",
+  theme: "dark-plus",
   onVisitLine(node) {
     if (node.children.length === 0) {
       node.children = [{
