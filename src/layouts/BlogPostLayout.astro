@@ -184,6 +184,28 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
   }
 </script>
 
+<script>
+const h2Tags = document.querySelectorAll("h2");
+
+h2Tags.forEach((h2Tag) => {
+  // Crie uma nova div para cada tag <h2>
+  const div = document.createElement("div");
+  let nextElement = h2Tag.nextElementSibling;
+
+  while (nextElement && nextElement.tagName !== "H2") {
+    const sibling = nextElement;
+    nextElement = nextElement.nextElementSibling;
+    div.appendChild(sibling);
+  }
+
+  // Verifique se a div não está vazia e insira-a após a tag <h2>
+  if (div.children.length > 0) {
+    h2Tag.parentNode?.insertBefore(div, h2Tag.nextSibling);
+  }
+});
+
+</script>
+
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap");
 
