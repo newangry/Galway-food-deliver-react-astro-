@@ -19,7 +19,7 @@ div[data-rehype-pretty-code-fragment] {
 }
 
 div[data-rehype-pretty-code-fragment] div {
-  @apply bg-[#22242e] border-b-slate-700;
+  @apply bg-zinc-800 border-b-zinc-950;
 }
 
 div[data-rehype-pretty-code-fragment] div span {
@@ -27,7 +27,7 @@ div[data-rehype-pretty-code-fragment] div span {
 }
 
 div[data-rehype-pretty-code-fragment] pre {
-  @apply p-0 py-2 rounded-t-none rounded-lg overflow-x-auto bg-[#22242e];
+  @apply p-0 py-2 rounded-t-none rounded-lg overflow-x-auto bg-zinc-950;
 }
 
 div[data-rehype-pretty-code-fragment] code {
