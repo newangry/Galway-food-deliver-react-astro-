@@ -20,17 +20,32 @@ export interface Props {
   updatedDate?: Date;
   cover?: string;
   isPost?: boolean;
+  isHome?: boolean;
   url?: string;
   citations?: Citation[];
 }
 
-const { title, description, pubDate, updatedDate, cover, isPost, url, citations } = Astro.props;
+const { title, description, pubDate, updatedDate, cover, isPost, isHome, url, citations } =
+  Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="pt-BR" class="font-sans dark">
   <head>
     <BaseHead title={title} description={description} ogImage={cover} />
+    {
+      isHome && (
+        <Schema
+          item={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Josafá Marengo",
+            alternateName: "Josafá",
+            url: "https://josafa.com.br/",
+          }}
+        />
+      )
+    }
     {
       isPost && (
         <Schema

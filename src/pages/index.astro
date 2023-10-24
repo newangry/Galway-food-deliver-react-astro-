@@ -4,7 +4,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import SeriesList from "../components/SeriesList.astro";
 import Hero from "../components/Hero.astro";
-import SearchBar from "../components/SearchBar.astro";
 
 const posts = await getCollection("blog");
 
@@ -18,7 +17,7 @@ const featuredPosts = posts.filter((post) => post.data.featured);
 const featuredSeries = (await getCollection("series")).filter((s) => s.data.featured);
 ---
 
-<BaseLayout>
+<BaseLayout isHome>
   <div class="space-y-10">
     <div class="space-y-1">
       <Hero />
