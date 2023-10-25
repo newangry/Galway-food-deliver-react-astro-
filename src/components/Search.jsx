@@ -11,16 +11,13 @@ const options = {
 };
 
 function Search({ searchList }) {
-  // User's input
   const [query, setQuery] = useState("");
 
   const fuse = new Fuse(searchList, options);
 
-  // Set a limit to the posts: 5
   const posts = fuse
     .search(query)
     .map((result) => result.item)
-    .slice(0, 5);
 
   function handleOnSearch({ target = {} }) {
     const { value } = target;
