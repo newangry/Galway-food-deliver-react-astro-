@@ -5,8 +5,6 @@ featured: false
 pubDate: '2023-04-01'
 tags: 
     - mobile
-    - android
-    - ios
 ---
 
 Se você é dono de um negócio, sabe que a presença online é fundamental para o sucesso. E um dos aspectos mais importantes dessa presença é um aplicativo para o seu negócio. Os aplicativos são uma das formas mais eficazes de se conectar com os clientes e fornecer uma experiência personalizada e conveniente. Mas como fazer um aplicativo para o seu negócio? Aqui estão algumas etapas importantes a seguir:

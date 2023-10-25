@@ -22,7 +22,6 @@ citations: [
 ]
 tags: 
     - python
-    - strings
 ---
 ## Introdução
 Antes de mergulhar nas funções de strings em Python, é essencial que você esteja bem familiarizado com a definição exata do que é uma string.

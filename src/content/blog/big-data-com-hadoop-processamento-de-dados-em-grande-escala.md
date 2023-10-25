@@ -26,7 +26,6 @@ citations: [
 ]
 tags: 
     - big data
-    - hadoop
 ---
 Com a crescente geração e disponibilidade de grandes volumes de dados, a necessidade de soluções eficientes para lidar com o processamento e análise de Big Data se tornou imperativa. Nesse contexto, o Apache Hadoop se destaca como uma das principais tecnologias para o processamento de Big Data, oferecendo escalabilidade, tolerância a falhas e recursos avançados para lidar com enormes conjuntos de dados. Nesse artigo, pretendo fazer uma breve apresentação dessa ferramenta. Mas primeiro, o que é essa tão famosa Big Data?
 
