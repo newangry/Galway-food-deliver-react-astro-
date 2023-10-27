@@ -155,7 +155,7 @@ string.charAt(index)
 
 ```jsx
 const texto = "Olá, mundo!";
-const caractere = texto.charAt(4);
+const caractere = texto.charAt(5);
 console.log(caractere); // "m"
 
 ```
