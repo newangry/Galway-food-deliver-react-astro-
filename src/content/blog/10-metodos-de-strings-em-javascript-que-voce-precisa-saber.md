@@ -2,7 +2,7 @@
 title: "10 métodos de strings em JavaScript que você deveria saber"
 description: Descubra os 10 métodos de strings essenciais para se destacar como um desenvolvedor Javascript. Aprimore suas habilidades agora!
 pubDate: '2023-10-27'
-cover: https://ik.imagekit.io/josafa/OG%20Images/java-collections?updatedAt=1694788101302
+cover: https://ik.imagekit.io/josafa/javascript.webp
 citations: [
     {
         author: 'Frugence Fidel',
