@@ -67,14 +67,14 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
       </div>
       <div class="flex space-x-2 items-center">
         {
-          tags.map((tag: unknown) => (
+          tags.map((tag: string) => (
             <a
               href={`/tags/${tag}/`}
               class="no-underline bg-zinc-800 text-white dark:text-black dark:bg-zinc-300 hover:bg-zinc-950 dark:hover:bg-zinc-100 
               transition-colors duration-300 ease-in-out text-xs font-extrabold uppercase 
               p-1 px-4 rounded"
             >
-              {tag}
+              {tag.replace("-", " ")}
             </a>
           ))
         }

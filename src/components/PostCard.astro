@@ -14,7 +14,7 @@ const { post } = Astro.props;
   class={`space-y-2 flex flex-col items-start rounded-lg p-5 bg-zinc-50 shadow shadow-zinc-500 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:shadow-none`}
 >
   <div class="space-y-1">
-    {post.data.tags.map((tag) => <span class="font-semibold uppercase text-xs bg-zinc-800 dark:bg-zinc-200 dark:text-black text-white px-1 rounded">{tag}</span>)}
+    {post.data.tags.map((tag) => <span class="font-semibold uppercase text-xs bg-zinc-800 dark:bg-zinc-200 dark:text-black text-white px-1 rounded">{tag.replace("-", " ")}</span>)}
     <div class="flex items-center space-x-2">
       <h2 class="text-xl text-black dark:text-white font-bold">{post.data.title}</h2>
       {
