@@ -33,17 +33,13 @@ export default defineConfig({
     sitemap(),
     tailwind(),
     preact(),
-    compress(),
-    (("astro-compress")).default(),
+    (await import("astro-compress")).default(),
   ],
   markdown: {
     extendDefaultPlugins: true,
     syntaxHighlight: false,
     rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions]],
     remarkPlugins: [remarkReadingTime],
-  },
-  experimental: {
-    assets: true,
   },
   vite: {
     plugins: [
