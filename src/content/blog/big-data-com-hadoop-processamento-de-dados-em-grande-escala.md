@@ -45,8 +45,6 @@ No HDFS, os dados são divididos em blocos de tamanho fixo e cada bloco é repli
 
 O HDFS possui uma arquitetura mestre-escravo. O nó mestre, chamado NameNode, é responsável pelo gerenciamento dos metadados do sistema de arquivos, como informações sobre a localização dos blocos de dados e permissões de acesso. Os nós escravos, chamados DataNodes, são responsáveis pelo armazenamento e recuperação dos blocos de dados.
 
-![Arquitetura do HDFS](~/assets/hdfs-nodes.webp)
-
  Quando um arquivo é enviado para o HDFS,inicialmente, o arquivo é guardado localmente em um arquivo temporário. À medida que o arquivo vai crescendo e atinge o tamanho definido para um bloco HDFS (geralmente 128MB na versão 2.0 do Hadoop e 64MB na versão 1.0), ocorre a interação com o NameNode, que retorna ao cliente uma lista com a identificação dos DataNodes onde o bloco deverá ser armazenado.
 
 O cliente, então, transfere os dados diretamente para os DataNodes da lista, dando início ao processo de replicação. O HDFS geralmente adota um fator de replicação igual a 3, o que significa que cada bloco será replicado em três DataNodes diferentes para garantir a redundância e a tolerância a falhas.
@@ -62,8 +60,6 @@ Uma das principais características do Hadoop é o paradigma de programação Ma
 O paradigma MapReduce divide o processamento em duas etapas principais: o mapeamento (map) e a redução (reduce). Na etapa de mapeamento, os dados são divididos em pares chave-valor e passados por uma função de mapeamento definida pelo desenvolvedor. Essa função é aplicada a cada par chave-valor individualmente, gerando uma lista intermediária de pares chave-valor.
 
 Em seguida, na etapa de redução, os pares chave-valor intermediários são agrupados pela chave e passados por uma função de redução. Essa função pode executar várias operações, como soma, contagem, média, entre outras, sobre os valores correspondentes à mesma chave. O resultado final do processo MapReduce é uma lista de pares chave-valor resultante das operações de redução.
-
-![Processo de contagem de palavras no MapReduce](~/assets/mapreduce.webp)
 
 O modelo MapReduce oferece uma abordagem poderosa e escalável para o processamento de grandes conjuntos de dados. Ele permite que desenvolvedores escrevam código simples e expressivo para realizar tarefas de processamento distribuído sem se preocupar com os detalhes de gerenciamento de clusters.
 
