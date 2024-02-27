@@ -30,12 +30,9 @@ const blog = defineCollection({
         .string()
         .optional()
         .transform((str) => (str ? new Date(str) : undefined)),
-      cover: z.string()
-        /*.refine((img) => img.width >= 1080, {
-          message: "Cover image must be at least 1080 pixels wide!",
-        })*/
+      /*cover: z.string()
         .optional(),
-      coverAlt: z.string().optional(),
+      coverAlt: z.string().optional(),*/
       citations: z.object({
         author: z.string(),
         title: z.string(),
