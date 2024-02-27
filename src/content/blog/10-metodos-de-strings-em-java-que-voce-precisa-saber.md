@@ -2,8 +2,6 @@
 title: "10 métodos de Strings em Java que você precisa saber"
 description: Domine Java com os 10 métodos de Strings mais utilizados. Aprenda a manipular textos de forma eficiente. Aprimore suas habilidades de programação agora!
 pubDate: '2023-08-20'
-cover: ~/assets/letras.webp
-coverAlt: 'Blocos de Letras'
 seriesId: 'java'
 orderInSeries: 0
 citations: [

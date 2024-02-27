@@ -16,7 +16,7 @@ const blog = defineCollection({
       tags: z
         .string()
         .array()
-        .transform((tags) => tags.map((tag) => `${tag}`)),
+        .transform((tags: any[]) => tags.map((tag) => `${tag}`)),
       draft: z.boolean().default(false),
       featured: z.boolean().default(false),
       planned: z.boolean().default(false),
@@ -25,14 +25,14 @@ const blog = defineCollection({
       pubDate: z
         .string()
         .or(z.date())
-        .transform((val) => new Date(val)),
+        .transform((val: string | number | Date) => new Date(val)),
       updatedDate: z
         .string()
         .optional()
-        .transform((str) => (str ? new Date(str) : undefined)),
-      /*cover: z.string()
+        .transform((str: string | number | Date) => (str ? new Date(str) : undefined)),
+      cover: z.string()
         .optional(),
-      coverAlt: z.string().optional(),*/
+      coverAlt: z.string().optional(),
       citations: z.object({
         author: z.string(),
         title: z.string(),
