@@ -5,7 +5,6 @@ import tailwind from "@astrojs/tailwind";
 import rehypePrettyCode from "rehype-pretty-code";
 import remarkReadingTime from "./src/plugins/remark-reading-time.mjs";
 import preact from "@astrojs/preact";
-//import compress from "astro-compress";
 import Icons from "unplugin-icons/vite";
 const rehypePrettyCodeOptions = {
   theme: "dark-plus",
@@ -33,7 +32,6 @@ export default defineConfig({
     sitemap(),
     tailwind(),
     preact(),
-    (await import("astro-compress")).default(),
   ],
   markdown: {
     extendDefaultPlugins: true,
