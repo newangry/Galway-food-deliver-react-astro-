@@ -6,9 +6,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "yarn add sharp --ignore-engines && astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "yarn add sharp --ignore-engines && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
