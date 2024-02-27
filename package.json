@@ -1,14 +1,14 @@
 {
-  "name": "Blog",
+  "name": "blog",
   "author": "Josafá Marengo",
   "repository": "https://github.com/josafamarengo/blog-astro.git",
   "license": "MIT",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "yarn add sharp --ignore-engines && astro dev",
+    "dev": "astro dev",
     "start": "astro dev",
-    "build": "yarn add sharp --ignore-engines && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
