@@ -8,7 +8,8 @@ export default function ToggleTheme() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const storedTheme = localStorage.getItem("theme");
-      setTheme(storedTheme ?? "dark");
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(storedTheme ?? (prefersDark ? "dark" : "light"));
     }
   }, []);
 
@@ -23,12 +24,13 @@ export default function ToggleTheme() {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   return (
     <button
       onClick={toggleTheme}
+      aria-label={"Toggle Theme"}
     >
       {theme === "light" ? (
         <PhMoonFill style={{ fontSize: "1.2em" }} />

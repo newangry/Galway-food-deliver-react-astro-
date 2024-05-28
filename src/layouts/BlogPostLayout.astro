@@ -102,9 +102,15 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
               <ul class="list-none space-y-2 -translate-x-8">
                 {citations.map((citation: any) => (
                   <li class="py-2">
-                    <a href={citation.url} target="_blank" rel="noopener noreferrer" class="text-lg">
+                    <a
+                      href={citation.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-lg"
+                    >
                       {citation.title}
-                    </a><br>
+                    </a>
+                    <br />
                     {citation.author}
                   </li>
                 ))}
@@ -114,17 +120,14 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
         }
       </div>
     </div>
-    <div class="flex sm:flex-col justify-between items-center fixed right-6 lg:right-28 bottom-16 bg-gradient-to-t from-zinc-950 from-10% to-zinc-800 text-white px-3 py-2 rounded-full text-xl sm:h-24">
+    <div
+      class="flex sm:flex-col justify-between items-center fixed right-6 lg:right-28 bottom-16 bg-gradient-to-t from-zinc-950 from-10% to-zinc-800 text-white px-3 py-2 rounded-full text-xl sm:h-24"
+    >
       <span class="mt-1">
-        <ShareButton
-         client:idle
-          url={url}
-          title={title}
-          description={description}
-        />
+        <ShareButton client:idle url={url} title={title} description={description} />
       </span>
       <span class="hidden sm:block">
-        <ScrollToTopButton client:idle/>
+        <ScrollToTopButton client:idle />
       </span>
     </div>
   </div>
@@ -185,25 +188,24 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
 </script>
 
 <script>
-const h2Tags = document.querySelectorAll("h2");
+  const h2Tags = document.querySelectorAll("h2");
 
-h2Tags.forEach((h2Tag) => {
-  // Crie uma nova div para cada tag <h2>
-  const div = document.createElement("div");
-  let nextElement = h2Tag.nextElementSibling;
+  h2Tags.forEach((h2Tag) => {
+    // Crie uma nova div para cada tag <h2>
+    const div = document.createElement("div");
+    let nextElement = h2Tag.nextElementSibling;
 
-  while (nextElement && nextElement.tagName !== "H2") {
-    const sibling = nextElement;
-    nextElement = nextElement.nextElementSibling;
-    div.appendChild(sibling);
-  }
+    while (nextElement && nextElement.tagName !== "H2") {
+      const sibling = nextElement;
+      nextElement = nextElement.nextElementSibling;
+      div.appendChild(sibling);
+    }
 
-  // Verifique se a div não está vazia e insira-a após a tag <h2>
-  if (div.children.length > 0) {
-    h2Tag.parentNode?.insertBefore(div, h2Tag.nextSibling);
-  }
-});
-
+    // Verifique se a div não está vazia e insira-a após a tag <h2>
+    if (div.children.length > 0) {
+      h2Tag.parentNode?.insertBefore(div, h2Tag.nextSibling);
+    }
+  });
 </script>
 
 <style>

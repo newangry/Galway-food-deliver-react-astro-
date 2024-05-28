@@ -1,5 +1,5 @@
 import Fuse from "fuse.js";
-import { useState } from "preact/hooks";
+import { useState, useMemo, useCallback } from "preact/hooks";
 
 // Configs fuse.js
 // https://fusejs.io/api/options.html
@@ -7,22 +7,23 @@ const options = {
   keys: ["frontmatter.title", "frontmatter.description", "frontmatter.tags"],
   includeMatches: true,
   minMatchCharLength: 2,
-  threshold: 0.5,
+  threshold: 0.2,
 };
 
 function Search({ searchList }) {
   const [query, setQuery] = useState("");
 
-  const fuse = new Fuse(searchList, options);
+  const fuse = useMemo(() => new Fuse(searchList, options), [searchList]);
 
   const posts = fuse
     .search(query)
     .map((result) => result.item)
 
-  function handleOnSearch({ target = {} }) {
+  const handleOnSearch = useCallback(({ target = {} }) => {
     const { value } = target;
     setQuery(value);
-  }
+  }, [])
+
   return (
     <div>
       <label
@@ -68,14 +69,14 @@ function Search({ searchList }) {
 
       {query.length > 1 && (
         <div className="my-4">
-          {posts.length === 1 ? "Encontrado" : "Encontrados"} {posts.length} {posts.length === 1 ? "resultado" : "resultados"} para '{query}'
+          {`Encontrado${posts.length === 1 ? '' : 's'} ${posts.length} resultado${posts.length === 1 ? '' : 's'} para '${query}'`}
         </div>
       )}
 
       <ul className="list-none">
         {posts &&
           posts.map((post) => (
-            <li className="py-2">
+            <li key={post.file} className="py-2">
               <a
                 className="group"
                 href={`/${post.file.replace("/opt/build/repo/src/content/","").replace(".md", "").replace(".mdx", "")}`}
