@@ -27,7 +27,7 @@ export default function ({ series, posts, order }: Props) {
         <div class="flex items-center justify-between">
           <div class="flex items justify-center space-x-2">
             <h2 class="text-xl text-black dark:text-white font-bold">{series.data.title}</h2>
-            <span class="text-xl font-light">{`${
+            <span class="text-xl font-light text-black dark:text-white">{`${
               order ? ` • ${order} de ${posts.length}` : ` • ${posts.length} Artigos`
             }`}</span>
           </div>
@@ -39,7 +39,7 @@ export default function ({ series, posts, order }: Props) {
             )}
           </div>
         </div>
-        <p class="font-light">{series.data.description}</p>
+        <p class="font-light text-zinc-900 dark:text-zinc-50">{series.data.description}</p>
       </button>
       {isOpen && (
         <ul class="p-5 space-y-2">
@@ -52,7 +52,7 @@ export default function ({ series, posts, order }: Props) {
                     : "before:bg-black dark:before:bg-white"
                   : !post.data.planned
                   ? "before:bg-black dark:before:bg-white"
-                  : "before:bg-slate-500 text-slate-500"
+                  : "before:bg-slate-500"
               }`}
             >
               <a
