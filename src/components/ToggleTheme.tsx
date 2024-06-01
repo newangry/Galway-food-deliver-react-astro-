@@ -3,13 +3,29 @@ import PhMoonFill from "~icons/ph/moon-fill";
 import PhSunFill from "~icons/ph/sun-fill";
 
 export default function ToggleTheme() {
-  const [theme, setTheme] = useState("dark");
 
-  useEffect(() => {
+  const getInitialTheme = () => {
     if (typeof window !== "undefined") {
       const storedTheme = localStorage.getItem("theme");
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(storedTheme ?? (prefersDark ? "dark" : "light"));
+      if (storedTheme) {
+        return storedTheme;
+      }
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return prefersDark ? "dark" : "light";
+    }
+    return "light";
+  };
+
+  const [theme, setTheme] = useState(getInitialTheme);
+
+  useEffect(() => {
+    const initialTheme = getInitialTheme();
+    setTheme(initialTheme);
+
+    if (initialTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
