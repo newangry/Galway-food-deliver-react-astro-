@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const posts = await getCollection("blog");
+
+const tagCounts: Record<string, number> = posts.reduce((acc: Record<string, number>, post) => {
+  post.data.tags.forEach((tag) => {
+    acc[tag] = (acc[tag] || 0) + 1;
+  });
+  return acc;
+}, {});
+
+const sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
+---
+
+<BaseLayout
+  title="Tags"
+  description="Lista de todos os assuntos disponíveis no blog, ordenados pelo número de posts."
+>
+  <h1 class="text-black dark:text-white pb-10 uppercase font-black text-4xl">Tópicos</h1>
+  <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    {
+      sortedTags.map(([tag, count]) => (
+        <li class="p-2 border border-zinc-400 rounded-lg flex items-center justify-center">
+          <a href={`/tags/${tag}`} class="hover:underline">
+            <h2 class="text-xl font-bold first-letter:uppercase">{tag}</h2>
+            <span class="text-sm font-normal">
+              ({count} {count === 1 ? "artigo" : "artigos"})
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
