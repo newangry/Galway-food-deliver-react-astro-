@@ -25,7 +25,7 @@ const { post } = Astro.props;
       <h2 class="text-xl text-black dark:text-white font-bold">{post.data.title}</h2>
       {
         post.data.planned && (
-          <span class="flex items-center justify-center p-0.5 px-1.5 bg-amber-500 rounded-full text-black font-black text-xs">
+          <span class="flex items-center justify-center p-0.5 px-1.5 bg-amber-500 rounded-full text-black dark:text-white font-black text-xs">
             Em breve
           </span>
         )
