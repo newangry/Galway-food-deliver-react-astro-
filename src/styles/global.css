@@ -54,7 +54,7 @@ article p {
 }
 
 article ul, article ol {
-  @apply space-y-4;
+  @apply space-y-4 text-black dark:text-white;
 }
 
 article table {
