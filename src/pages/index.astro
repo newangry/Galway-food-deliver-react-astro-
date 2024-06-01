@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import SeriesList from "../components/SeriesList.astro";
 import Hero from "../components/Hero.astro";
+import LatestVideo from "../components/LatestVideo.astro";
 
 const posts = await getCollection("blog");
 
@@ -15,6 +16,8 @@ const sortedPosts = posts
 const featuredPosts = posts.filter((post) => post.data.featured);
 
 const featuredSeries = (await getCollection("series")).filter((s) => s.data.featured);
+
+const channelId = import.meta.env.PROD ? "UCraUQSH-tLy8jI1R_hzbTkg" : "UCyHOBY6IDZF9zOKJPou2Rgg";
 ---
 
 <BaseLayout isHome>
@@ -57,6 +60,9 @@ const featuredSeries = (await getCollection("series")).filter((s) => s.data.feat
         </div>
       )
     }
+    <section class="mt-4">
+      <LatestVideo channelID={channelId} />
+    </section>
   </div>
   <a rel="me" href="https://mastodon.social/@josafa" aria-label="Mastodon"></a>
 </BaseLayout>

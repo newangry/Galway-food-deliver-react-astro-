@@ -27,12 +27,7 @@ const rehypePrettyCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
   site: "https://josafa.com.br",
-  integrations: [
-    mdx(),
-    sitemap(),
-    tailwind(),
-    preact(),
-  ],
+  integrations: [mdx(), sitemap(), tailwind(), preact()],
   markdown: {
     extendDefaultPlugins: true,
     syntaxHighlight: false,
@@ -49,6 +44,9 @@ export default defineConfig({
     ],
     ssr: {
       noExternal: ["astro-seo-schema"],
+    },
+    devToolbar: {
+      enabled: false,
     },
   },
 });

@@ -46,11 +46,11 @@ div[data-rehype-pretty-code-fragment] .line {
 }
 
 div[data-rehype-pretty-code-fragment] .highlighted {
-  @apply border-blue-400 bg-blue-400/20;
+  @apply border-blue-600 bg-blue-600/20;
 }
 
 article p {
-  @apply text-lg font-light leading-7 tracking-tight text-black dark:text-zinc-50;
+  @apply text-xl font-light leading-7 tracking-tight text-black dark:text-zinc-50;
 }
 
 article ul, article ol {
@@ -62,7 +62,11 @@ article table {
 }
 
 article table thead {
-  @apply bg-zinc-300 dark:bg-zinc-800;
+  @apply w-full bg-zinc-300 dark:bg-zinc-800;
+}
+
+article table thead tr {
+  @apply w-full
 }
 
 article table th {

@@ -21,6 +21,7 @@
     "astro": "4.4.5",
     "astro-compress": "^2.2.11",
     "astro-seo-schema": "^2.2.0",
+    "fast-xml-parser": "^4.4.0",
     "fuse.js": "^6.6.2",
     "preact": "^10.6.5",
     "qs": "^6.12.1",

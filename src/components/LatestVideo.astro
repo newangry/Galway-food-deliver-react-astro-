@@ -1,0 +1,103 @@
+---
+import { Image } from "astro:assets";
+import { XMLParser } from "fast-xml-parser";
+
+import PhPlay from "~icons/ph/play-circle";
+
+type Author = {
+  name: string;
+  uri: string;
+};
+
+type YouTubeRSSFeed = {
+  link: string[];
+  id: string; // yt:channel:{id}
+  "yt:channelId": string;
+  title: string;
+  author: Author;
+  entry: YouTubeRSSEntry[];
+};
+
+type YouTubeRSSEntry = {
+  id: string; // yt:video:{id}
+  "yt:videoId": string;
+  "yt:channelId": string;
+  title: string;
+  link: string;
+  published: string;
+  updated: string;
+  author: Author;
+  "media:group": YouTubeRSSMediaGroup;
+};
+
+type YouTubeRSSMediaGroup = {
+  "media:title": string;
+  "media:description": string;
+  "media:content": {
+    "@_url": string;
+    "@_type": string;
+    "@_width": string;
+    "@_height": string;
+  };
+  "media:thumbnail": {
+    "@_url": string;
+    "@_width": string;
+    "@_height": string;
+  };
+};
+
+type YouTubeRSS = {
+  feed: YouTubeRSSFeed;
+};
+
+type Props = {
+  channelID: string;
+};
+
+//
+const { channelID } = Astro.props;
+const youtubeRSS = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`;
+const rssData = await fetch(youtubeRSS).then((res) => res.text());
+
+const options = {
+  ignoreAttributes: false,
+  attributeNamePrefix: "@_",
+};
+const parser = new XMLParser(options);
+
+const rss = parser.parse(rssData) as YouTubeRSS;
+const video = rss.feed.entry != null && rss.feed.entry[0];
+---
+
+{
+  video && (
+    <>
+      <h2 class="text-3xl text-black dark:text-white my-4">Último vídeo</h2>
+      <a href={video["media:group"]["media:content"]["@_url"]} target="_blank">
+        <div class="flex flex-col items-center sm:flex-row w-full h-full p-4 sm:p-2 md:p-4 shadow shadow-zinc-500 dark:shadow-none dark:bg-zinc-800 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-700">
+          <div class="flex-1 relative">
+            <div class="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 m-2" />
+            <Image
+              class="rounded-lg object-cover aspect-video object-center w-full h-full shadow-xl"
+              src={video["media:group"]["media:thumbnail"]["@_url"]}
+              alt={video["media:group"]["media:title"]}
+              width={parseInt(video["media:group"]["media:content"]["@_width"])}
+              height={parseInt(video["media:group"]["media:content"]["@_height"])}
+            />
+          </div>
+          <div class="flex flex-1 flex-col justify-between py-2 mx-2">
+            <h3 class="text-[clamp(1.25rem,1.125rem+0.6667vw,1.625rem)] font-bold mb-2 break-words">
+              {video["media:group"]["media:title"]}
+            </h3>
+            <div class="my-1 text-sm">
+              <button class="rounded-full inline-flex flex-row items-center justify-between px-4 bg-zinc-800 dark:bg-zinc-300 text-zinc-50 dark:text-zinc-900">
+                Assistir no YouTube
+                <PhPlay />
+              </button>
+            </div>
+          </div>
+        </div>
+      </a>
+    </>
+  )
+}
