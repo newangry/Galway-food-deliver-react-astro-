@@ -10,7 +10,7 @@ citations: [
     }
 ]
 tags: 
-    - concurso
+    - concursos
 ---
 
 Se você está em busca de uma carreira sólida e desafiadora na área de Tecnologia da Informação (TI), o Concurso Público da Caixa Econômica Federal de 2024 pode ser a oportunidade que você estava esperando. Com 2 mil vagas(1600 + 400 de Cadastro de Reserva) em 7 estados: Amazonas, Goiás, Minas Gerais, Pernambuco, Rio de Janeiro, Rio Grande do Sul, São Paulo e o Distrito Federal, este concurso oferece uma chance única de ingressar no maior banco público da América Latina e contribuir para a execução das principais políticas públicas do país.

@@ -3,7 +3,7 @@ title: Salário inicial de mais de R$ 5 mil, sem experiência.
 description: Descubra a oportunidade única de trabalhar no Banco do Brasil, um dos maiores bancos do país, na área de Tecnologia da Informação.
 pubDate: '2023-01-30'
 tags: 
-    - concurso
+    - concursos
 ---
 
 O Banco do Brasil, um dos maiores bancos do país, está oferecendo uma oportunidade incrível para os profissionais da área de Tecnologia da Informação. Através de seu concurso de Escriturário - Agente de Tecnologia.

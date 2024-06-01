@@ -3,7 +3,7 @@ title: SERPRO oferece 602 vagas com inicial de R$ 9 mil
 description: Se uma vaga de emprego com salário de mais de 9 mil reais, além de diversos benefícios e a possibilidade de trabalho remoto te interessa, essa notícia é para você.
 pubDate: '2023-04-05'
 tags: 
-    - concurso
+    - concursos
 ---
 
 Se uma vaga de emprego com salário de mais de 9 mil reais, além de diversos benefícios e a possibilidade de trabalho remoto te interessa, essa notícia é para você. O Serpro, empresa de tecnologia do Governo Federal, irá abrir um concurso público para o cargo de Analista com especialização em Tecnologia. Serão cerca de 600 vagas em todo o Brasil, com a possibilidade de atuar em regime de trabalho remoto, inclusive no exterior, conforme as condições estabelecidas em normativos vigentes.

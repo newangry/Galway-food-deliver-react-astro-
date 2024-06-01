@@ -4,7 +4,7 @@ description: "Concurso Câmara Municipal de São Paulo: Edital divulgado! Salár
 pubDate: '2023-10-25'
 cover: https://ik.imagekit.io/josafa/concursos-publicos.webp
 tags: 
-    - concurso
+    - concursos
 ---
 O concurso público da Câmara Municipal de São Paulo, que oferece 38 vagas imediatas e cadastro reserva para cargos de nível médio/técnico e superior, é uma ótima oportunidade para profissionais da área de TI.
 

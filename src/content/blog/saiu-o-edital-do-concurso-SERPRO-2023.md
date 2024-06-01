@@ -3,7 +3,7 @@ title: 'Concurso SERPRO 2023: Edital traz 602 vagas'
 description: 'Não perca essa chance! O edital do concurso SERPRO 2023 foi publicado. Confira aqui as informações sobre inscrições e provas.'
 pubDate: '2023-04-19'
 tags: 
-    - concurso
+    - concursos
 ---
 Notícia quentinha para quem busca uma carreira estável e desafiadora: acaba de sair o edital do concurso público do SERPRO, uma das maiores empresas de tecnologia do país! Esta pode ser a sua chance de ingressar em uma empresa reconhecida e crescer profissionalmente. Leia mais abaixo sobre os detalhes do concurso e comece já a se preparar para a prova.
 
