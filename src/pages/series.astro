@@ -1,12 +1,12 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SeriesList from "../components/SeriesList.astro";
+import SeriesList from "../components/lists/SeriesList.astro";
 
 const series = await getCollection("series");
 ---
 
 <BaseLayout title="Séries | Josafá Marengo" description="Aprenda, aprimore e mergulhe em conhecimento em nossa coleção de séries de artigos especializados. Torne-se um especialista nos tópicos que mais lhe interessam.">
-  <h1 class="text-black dark:text-white pb-10 text-4xl">Séries</h1>
+  <h1 class="text-black pb-10 text-4xl">Séries</h1>
   <SeriesList series={series} />
 </BaseLayout>

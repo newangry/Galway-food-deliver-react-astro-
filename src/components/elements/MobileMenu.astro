@@ -1,9 +1,9 @@
 ---
 import Home from "~icons/mdi/home";
 
-import ToggleTheme from "./ToggleTheme";
-import ScrollToTopButton from "./ScrollToTopButton";
-import SearchButton from "./SearchButton.astro";
+import ToggleTheme from "../buttons/ToggleTheme";
+import ScrollToTopButton from "../buttons/ScrollToTopButton";
+import SearchButton from "../buttons/SearchButton.astro";
 
 function handleOnClick() {
   document.body.scrollTop = 0; // For Safari
@@ -11,7 +11,9 @@ function handleOnClick() {
 }
 ---
 
-<nav class="fixed py-3 bottom-2 left-2 right-2 h-12 bg-gradient-to-t from-zinc-950 from-10% to-zinc-800 rounded-lg sm:hidden">
+<nav
+  class="fixed py-3 bottom-2 left-2 right-2 h-12 bg-gradient-to-t from-zinc-950 from-10% to-zinc-800 rounded-lg sm:hidden"
+>
   <ul class="flex justify-around">
     <li>
       <a href="/" class="text-white text-xl" aria-label="Página Inicial">
@@ -20,9 +22,6 @@ function handleOnClick() {
     </li>
     <li class="text-white text-xl">
       <SearchButton />
-    </li>
-    <li class="text-white">
-      <ToggleTheme client:only />
     </li>
     <li class="text-white">
       <ScrollToTopButton client:idle />

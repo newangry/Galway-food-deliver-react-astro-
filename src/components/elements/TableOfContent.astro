@@ -1,5 +1,5 @@
 ---
-import TableOfContentHeading from "./TableOfContentHeading.astro";
+import TableOfContentHeading from "../objects/TableOfContentHeading.astro";
 
 type TableOfContent = {
   depth: number;
@@ -37,15 +37,15 @@ const { headings } = Astro.props;
 const toc = buildToc(headings);
 ---
 
-<nav class="space-y-2 mb-2 border border-zinc-700 bg-white dark:bg-zinc-800 rounded-lg overflow-hidden px-6 sm:px-28 py-8 w-[min(600px,100%)] relative">
-  <span class="font-black dark:text-white text-black uppercase"> Confira nesse artigo:</span>
+<nav class="space-y-2 mb-2 border border-zinc-700 bg-white rounded-lg overflow-hidden px-6 sm:px-28 py-8 w-[min(600px,100%)] relative">
+  <span class="font-black text-black uppercase"> Confira nesse artigo:</span>
   <div class="not-prose">
     <ul id="list" class={`list-disc list-outside space-y-2 max-h-[120px] overflow-hidden ${headings.length > 3 && "pb-8"}`}>
       {toc.map((heading) => <TableOfContentHeading heading={heading} />)}
     </ul>
     {
       headings.length > 3 && (
-        <button id="more" class="bg-zinc-900 dark:bg-zinc-700 text-white absolute bottom-0 left-0 right-0 text-center w-full py-2 font-bold text-sm"
+        <button id="more" class="bg-zinc-900 text-white absolute bottom-0 left-0 right-0 text-center w-full py-2 font-bold text-sm"
       >Ver mais</button>
       )
     }

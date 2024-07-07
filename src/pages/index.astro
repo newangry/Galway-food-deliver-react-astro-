@@ -1,10 +1,10 @@
 ---
-import PostsList from "../components/PostsList.astro";
+import PostsList from "../components/lists/PostsList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-import SeriesList from "../components/SeriesList.astro";
-import Hero from "../components/Hero.astro";
-import LatestVideo from "../components/LatestVideo.astro";
+import SeriesList from "../components/lists/SeriesList.astro";
+import Hero from "../components/elements/Hero.astro";
+import LatestVideo from "../components/objects/VideoCard.astro";
 
 const posts = await getCollection("blog");
 
@@ -28,14 +28,14 @@ const channelId = import.meta.env.PROD ? "UCraUQSH-tLy8jI1R_hzbTkg" : "UCyHOBY6I
     {
       featuredPosts.length > 0 && (
         <div class="space-y-5">
-          <h2 class="text-3xl text-black dark:text-white">Destaque</h2>
+          <h2 class="text-3xl text-black">Destaque</h2>
           <PostsList posts={featuredPosts} />
         </div>
       )
     }
     <div class="space-y-5">
       <div class="flex items-center justify-between space-x-2">
-        <h2 class="text-3xl text-black dark:text-white">Últimos Posts</h2>
+        <h2 class="text-3xl text-black">Últimos Posts</h2>
         <a
           href="/blog/"
           class="inline-flex items-center justify-center py-0.5 px-3 bg-zinc-800 hover:bg-blue-800 rounded-full text-sm text-white transition-colors duration-300 ease-in-out"
@@ -48,7 +48,7 @@ const channelId = import.meta.env.PROD ? "UCraUQSH-tLy8jI1R_hzbTkg" : "UCyHOBY6I
       featuredSeries.length > 0 && (
         <div class="space-y-5">
           <div class="flex items-center justify-between space-x-2">
-            <h2 class="text-3xl text-black dark:text-white">Séries</h2>
+            <h2 class="text-3xl text-black">Séries</h2>
             <a
               href="/series/"
               class="inline-flex items-center justify-center py-0.5 px-3 bg-zinc-800 hover:bg-blue-800 rounded-full text-sm text-white transition-colors duration-300 ease-in-out"

@@ -1,13 +1,14 @@
 ---
+// @ts-nocheck
 import { CollectionEntry, getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "./BaseLayout.astro";
-import TableOfContent from "../components/TableOfContent.astro";
-import ScrollToTopButton from "../components/ScrollToTopButton";
+import TableOfContent from "../components/elements/TableOfContent.astro";
+import ScrollToTopButton from "../components/buttons/ScrollToTopButton";
 import { Image } from "astro:assets";
-import SeriesList from "../components/SeriesList.astro";
-import SeriesCard from "../components/SeriesCard.astro";
-import ShareButton from "../components/ShareButton";
+import SeriesList from "../components/lists/SeriesList.astro";
+import SeriesCard from "../components/objects/SeriesCard.astro";
+import ShareButton from "../components/buttons/ShareButton";
 
 type Blog = CollectionEntry<"blog">["data"];
 
@@ -44,11 +45,11 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
 
 <BaseLayout {title} {description} {pubDate} {updatedDate} {url} {citations} {cover} isPost>
   <div
-    class="prose prose-slate max-w-none prose-headings:scroll-my-20 prose-a:underline-offset-2 prose-a:decoration-blue-600 prose-img:rounded-lg dark:prose-invert post"
+    class="prose prose-slate max-w-none prose-headings:scroll-my-20 prose-a:underline-offset-2 prose-a:decoration-blue-600 prose-img:rounded-lg"
   >
     <h1 class="font-extrabold font-sans text-[clamp(2.5em,5vw,3em)]">{title}</h1>
     <div class="font-normal text-xs uppercase space-y-2">
-      <div class="flex flex-wrap items-center space-x-3 text-black dark:text-white">
+      <div class="flex flex-wrap items-center space-x-3 text-black ">
         <span>
           <FormattedDate date={pubDate} />
         </span>
@@ -70,7 +71,7 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
           tags.map((tag: string) => (
             <a
               href={`/tags/${tag}/`}
-              class="no-underline bg-zinc-800 text-white dark:text-black dark:bg-zinc-300 hover:bg-zinc-950 dark:hover:bg-zinc-100 
+              class="no-underline bg-zinc-800 text-white  hover:bg-zinc-950 
               transition-colors duration-300 ease-in-out text-xs font-extrabold uppercase 
               p-1 px-4 rounded"
             >
@@ -213,7 +214,5 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
 
   .post {
     font-family: "Nunito", sans-serif;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 </style>

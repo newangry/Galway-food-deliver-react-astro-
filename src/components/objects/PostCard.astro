@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import FormattedDate from "./FormattedDate.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -11,21 +10,21 @@ const { post } = Astro.props;
 
 <a
   href={!post.data.planned ? `/blog/${post.slug}/` : null}
-  class={`space-y-2 flex flex-col items-start rounded-lg p-5 bg-zinc-50 shadow shadow-zinc-500 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:shadow-none`}
+  class={`space-y-2 flex flex-col items-start rounded-lg p-5 bg-zinc-50 shadow shadow-zinc-500 hover:bg-zinc-200`}
 >
   <div class="space-y-1">
       {
         post.data.tags.map((tag) => (
-          <span class="font-semibold uppercase text-xs bg-zinc-800 dark:bg-zinc-200 dark:text-black text-white px-1 rounded">
+          <span class="font-semibold uppercase text-xs bg-zinc-800 text-white px-1 rounded">
             {tag.replace("-", " ")}
           </span>
         ))
       }
     <div class="flex items-center space-x-2">
-      <h2 class="text-xl text-black dark:text-white font-bold">{post.data.title}</h2>
+      <h2 class="text-xl text-black font-bold">{post.data.title}</h2>
       {
         post.data.planned && (
-          <span class="flex items-center justify-center p-0.5 px-1.5 bg-amber-500 rounded-full text-black dark:text-white font-black text-xs">
+          <span class="flex items-center justify-center p-0.5 px-1.5 bg-amber-500 rounded-full text-black font-black text-xs">
             Em breve
           </span>
         )

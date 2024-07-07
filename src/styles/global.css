@@ -50,19 +50,19 @@ div[data-rehype-pretty-code-fragment] .highlighted {
 }
 
 article p {
-  @apply text-xl font-light leading-7 tracking-tight text-black dark:text-zinc-50;
+  @apply text-xl font-light leading-7 tracking-tight text-black;
 }
 
 article ul, article ol {
-  @apply space-y-4 text-black dark:text-white;
+  @apply space-y-4 text-black;
 }
 
 article table {
-  @apply w-full text-left text-black dark:text-white block overflow-auto;
+  @apply w-full text-left text-black block overflow-auto;
 }
 
 article table thead {
-  @apply w-full bg-zinc-300 dark:bg-zinc-800;
+  @apply w-full bg-zinc-300;
 }
 
 article table thead tr {
@@ -70,23 +70,23 @@ article table thead tr {
 }
 
 article table th {
-  @apply px-4 py-2 font-light text-sm text-center border border-zinc-300 dark:border-zinc-700;
+  @apply px-4 py-2 font-light text-sm text-center border border-zinc-300;
 }
 
 article table td {
-  @apply font-light text-sm px-20 py-2 border dark:border-zinc-700;
+  @apply font-light text-sm px-20 py-2 border;
 }
 
 article table td:first-child {
-  @apply font-light text-sm px-4 py-2 border dark:border-zinc-700;
+  @apply font-light text-sm px-4 py-2 border;
 }
 
 article table tr:nth-child(even) {
-  @apply bg-zinc-200 dark:bg-zinc-800;
+  @apply bg-zinc-200;
 }
 
 ul, ol {
-  @apply font-light tracking-tight text-black dark:text-zinc-50;
+  @apply font-light tracking-tight text-black;
 }
 
 img {

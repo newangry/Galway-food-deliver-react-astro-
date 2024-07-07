@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PostsList from "../../components/PostsList.astro";
+import PostsList from "../../components/lists/PostsList.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -21,7 +21,7 @@ const tech: string = t!.charAt(0).toUpperCase() + t!.slice(1).toLowerCase()
 ---
 
 <BaseLayout title={`Artigos sobre ${tech}`} description={`Aprofunde-se em tutoriais, dicas e insights sobre ${tech} para aprimorar suas habilidades e conhecimentos. Acompanhe aqui tudo sobre ${tech}.`}>
-  <h1 class="text-black dark:text-white pb-10 uppercase font-black text-4xl">
+  <h1 class="text-black pb-10 uppercase font-black text-4xl">
     {`${t}`}
   </h1>
   <PostsList posts={posts} />

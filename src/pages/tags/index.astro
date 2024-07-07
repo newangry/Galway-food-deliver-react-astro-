@@ -18,7 +18,7 @@ const sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
   title="Tags"
   description="Lista de todos os assuntos disponíveis no blog, ordenados pelo número de posts."
 >
-  <h1 class="text-black dark:text-white pb-10 uppercase font-black text-4xl">Tópicos</h1>
+  <h1 class="text-black pb-10 uppercase font-black text-4xl">Tópicos</h1>
   <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
     {
       sortedTags.map(([tag, count]) => (

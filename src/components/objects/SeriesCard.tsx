@@ -9,7 +9,7 @@ interface Props {
   order?: number;
 }
 
-export default function ({ series, posts, order }: Props) {
+export default function SCard({ series, posts, order }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOnClick = () => {
@@ -17,21 +17,21 @@ export default function ({ series, posts, order }: Props) {
   };
 
   return (
-    <div class="bg-zinc-50 shadow shadow-zinc-500 dark:shadow-none dark:bg-zinc-800 rounded-lg">
+    <div class="bg-zinc-50 shadow shadow-zinc-500 rounded-lg">
       <button
-        class={`w-full p-5 rounded-lg text-left space-y-2 hover:bg-zinc-200 dark:hover:bg-zinc-800 ${
-          isOpen ? "border-b-2 border-zinc-600 rounded-b-lg bg-zinc-300 dark:bg-zinc-700" : ""
+        class={`w-full p-5 rounded-lg text-left space-y-2 hover:bg-zinc-200 ${
+          isOpen ? "border-b-2 border-zinc-600 rounded-b-lg bg-zinc-300" : ""
         }`}
         onClick={handleOnClick}
       >
         <div class="flex items-center justify-between">
           <div class="flex items justify-center space-x-2">
-            <h2 class="text-xl text-black dark:text-white font-bold">{series.data.title}</h2>
-            <span class="text-xl font-light text-black dark:text-white">{`${
+            <h2 class="text-xl text-black font-bold">{series.data.title}</h2>
+            <span class="text-xl font-light text-black">{`${
               order ? ` • ${order} de ${posts.length}` : ` • ${posts.length} Artigos`
             }`}</span>
           </div>
-          <div class="text-black dark:text-white">
+          <div class="text-black">
             {isOpen ? (
               <MaterialSymbolsKeyboardArrowUpRounded style={{ fontSize: "1.5em" }} />
             ) : (
@@ -39,7 +39,7 @@ export default function ({ series, posts, order }: Props) {
             )}
           </div>
         </div>
-        <p class="font-light text-zinc-900 dark:text-zinc-50">{series.data.description}</p>
+        <p class="font-light text-zinc-900">{series.data.description}</p>
       </button>
       {isOpen && (
         <ul class="p-5 space-y-2">
@@ -49,9 +49,9 @@ export default function ({ series, posts, order }: Props) {
                 !post.data.planned && order
                   ? order == index + 1
                     ? "before:bg-blue-600 before:ring-[3px] before:ring-blue-600/40"
-                    : "before:bg-black dark:before:bg-white"
+                    : "before:bg-black"
                   : !post.data.planned
-                  ? "before:bg-black dark:before:bg-white"
+                  ? "before:bg-black"
                   : "before:bg-slate-500"
               }`}
             >
@@ -59,7 +59,7 @@ export default function ({ series, posts, order }: Props) {
                 href={!post.data.planned ? `/blog/${post.slug}` : undefined}
                 class={`space-x-2 font-medium ${
                   !post.data.planned
-                    ? "underline underline-offset-2 text-black dark:text-white decoration-blue-600"
+                    ? "underline underline-offset-2 text-black decoration-blue-600"
                     : "text-white0"
                 }`}
               >

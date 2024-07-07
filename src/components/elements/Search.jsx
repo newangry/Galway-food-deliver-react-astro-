@@ -28,7 +28,7 @@ function Search({ searchList }) {
     <div>
       <label
         htmlFor="search"
-        className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+        className="mb-2 text-sm font-medium text-gray-900 sr-only"
       >
         Search
       </label>
@@ -57,9 +57,9 @@ function Search({ searchList }) {
           value={query}
           onChange={handleOnSearch}
           className="block w-full p-4 pl-10
-                                text-zinc-900 dark:text-white
+                                text-zinc-900
                                border border-zinc-500
-                               rounded-lg bg-zinc-50 dark:bg-zinc-800
+                               rounded-lg bg-zinc-50 
                                focus:outline-none
                                focus:ring-blue-500
                                focus:border-blue-500"
@@ -81,10 +81,10 @@ function Search({ searchList }) {
                 className="group"
                 href={`/${post.file.replace("/opt/build/repo/src/content/","").replace(".md", "").replace(".mdx", "")}`}
               >
-                <h2 className="text-lg text-blue-800 dark:text-blue-500 group-hover:text-blue-950 dark:group-hover:text-blue-400 group-hover:underline underline-offset-2 font-medium">
+                <h2 className="text-lg text-blue-800 group-hover:text-blue-950  group-hover:underline underline-offset-2 font-medium">
                   {post.frontmatter.title}
                 </h2>
-                <p className="text-sm text-zinc-800 dark:text-zinc-300">{post.frontmatter.description}</p>
+                <p className="text-sm text-zinc-800">{post.frontmatter.description}</p>
                 
               </a>
             </li>

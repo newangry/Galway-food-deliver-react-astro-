@@ -1,10 +1,12 @@
 ---
-import ToggleTheme from "./ToggleTheme";
-import Popover from "./Popover.astro";
-import SearchButton from "./SearchButton.astro";
+import ToggleTheme from "../buttons/ToggleTheme";
+import Popover from "../objects/Popover.astro";
+import SearchButton from "../buttons/SearchButton.astro";
 ---
 
-<header class="hidden sm:block fixed py-2 left-0 right-0 z-50 dark:bg-zinc-900 bg-zinc-50 uppercase">
+<header
+  class="hidden sm:block fixed py-2 left-0 right-0 z-50 bg-zinc-50 uppercase"
+>
   <div
     class="container mx-auto py-2 px-4 md:max-w-3xl lg:max-w-5xl flex justify-between items-center"
   >
@@ -20,7 +22,7 @@ import SearchButton from "./SearchButton.astro";
     <nav>
       <ul class="flex space-x-1 text-sm">
         <li
-          class="px-4 py-2 text-sm hover:bg-zinc-50 cursor-pointer dark:hover:text-white dark:hover:bg-zinc-800 rounded-lg"
+          class="px-4 py-2 text-sm hover:bg-zinc-50 cursor-pointer rounded-lg"
         >
           <a href="/tags/">Tópicos</a>
         </li>
@@ -47,7 +49,6 @@ import SearchButton from "./SearchButton.astro";
       <div class="text-2xl">
         <SearchButton />
       </div>
-      <ToggleTheme client:idle />
     </div>
   </div>
 </header>

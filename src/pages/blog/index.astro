@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PostsList from "../../components/PostsList.astro";
+import PostsList from "../../components/lists/PostsList.astro";
 
 const posts = (await getCollection("blog"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -9,6 +9,6 @@ const posts = (await getCollection("blog"))
 ---
 
 <BaseLayout title="Artigos sobre programação e concursos na área de TI" description="Desvende o mundo da tecnologia com dicas práticas e tendências atualizadas. Leia aqui os melhores artigos sobre programação e concursos públicos na área de TI. ">
-  <h1 class="text-black dark:text-white pb-10 text-4xl">Blog</h1>
+  <h1 class="text-black pb-10 text-4xl">Blog</h1>
   <PostsList posts={posts} />
 </BaseLayout>

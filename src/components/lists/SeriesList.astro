@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import AstroSeriesCard from "./SeriesCard.astro";
+import SeriesCard from "../objects/SeriesCard.astro"
 
 export interface Props {
   series: CollectionEntry<"series">[];
@@ -14,7 +14,7 @@ const { series } = Astro.props;
     {
       series.map((s) => (
         <li>
-          <AstroSeriesCard series={s} />
+          <SeriesCard series={s} />
         </li>
       ))
     }
